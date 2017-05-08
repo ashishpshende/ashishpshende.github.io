@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html>
+<title>Ashish Shende</title>
+<link rel="icon" type="image/x-icon" href="https://cdn3.iconfinder.com/data/icons/block/32/letter-512.png" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<style type="text/css">
+  
+    .tooltip{
+        display: inline;
+        position: relative;
+    }
+    
+    .tooltip:hover:after{
+        background: #333;
+        background: rgba(0,0,0,.8);
+        border-radius: 5px;
+        bottom: 26px;
+        color: #fff;
+        content: attr(title);
+        left: 20%;
+        padding: 5px 15px;
+        position: absolute;
+        z-index: 98;
+        width: 220px;
+    }
+    
+    .tooltip:hover:before{
+        border: solid;
+        border-color: #333 transparent;
+        border-width: 6px 6px 0 6px;
+        bottom: 20px;
+        content: "";
+        left: 50%;
+        position: absolute;
+        z-index: 99;
+    }
+    .some_element {
+        position: relative;
+        width: 20%;
+        height: 0;
+        padding-bottom: 20%;
+    }
+
+    html,body,h1,h2,h3,h4,h5 {
+        font-family: "Raleway", sans-serif
+    }
+    
+    .w3-sidenav a,.w3-sidenav h4 {
+        font-weight:bold
+    }
+    header.noscroll{
+    position:fixed;
+    overflow:hidden;
+    }
+</style>
+
+<body class="w3-light-gray w3-content" style="max-width:1600px">
+
+<!-- Sidenav/menu -->
+<nav class="w3-sidenav w3-collapse w3-gray w3-animate-left" style="z-index:3;width:300px;" id="mySidenav"><br>
+
+  <div class="w3-container">
+    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding" title="close menu">
+      <i class="fa fa-remove"></i>
+    </a>
+    <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTYiJtNzg41uH6_geCxX05_dzwz4Rf-lkYJ1pc9FtmHifr5XMexz2nDzA" style="width:45%;" class="w3-round"><br><br>
+    <h4 class="w3-padding-0"><b>Ashish Shende</b></h4>
+    <p class="w3-text-grey">Lead Product Developer</p>
+    <p class="w3-text-grey">WhiteSnow Software Consultancy Private Limited, Pune</p>
+  </div>
+  <a href="#" class="w3-padding w3-text-teal" onclick="HOME_Nav_Link_Clicked()">HOME</a>
+  <a href="#Projects" class="w3-padding" onclick="PROJECTS_Nav_Link_Clicked()">PROJECTS</a>
+  <a href="#Skills" class="w3-padding" onclick="SKILLS_Nav_Link_Clicked()">SKILLS</a>
+  <a href="#Technologies" class="w3-padding" onclick="TECHNOLGIES_Nav_Link_Clicked()">TECHNOLGIES</a>
+  <a href="#Education" class="w3-padding" onclick="EDUCATION_Nav_Link_Clicked()">EDUCATION</a>
+  <a href="#Contact" class="w3-padding" onclick="CONTACT_Nav_Link_Clicked()">CONTACT</a>
+   
+  <div class="w3-section w3-padding-top w3-large">
+    <a href="https://www.facebook.com/ashishpshende" target='_blank' class="w3-hover-white w3-hover-text-indigo w3-show-inline-block"><i class="fa fa-facebook-official"></i></a>
+    <a href="https://www.pinterest.com/ashishpshende" target='_blank' class="w3-hover-white w3-hover-text-red w3-show-inline-block"><i class="fa fa-pinterest-p"></i></a>
+    <a href="https://twitter.com/ashishpshende" target='_blank' class="w3-hover-white w3-hover-text-light-blue w3-show-inline-block"><i class="fa fa-twitter"></i></a>
+    <a href="https://plus.google.com/u/0/+AshishShende629" target='_blank' class="w3-hover-white w3-hover-text-grey w3-show-inline-block"><i class="fa fa-google-plus-square"></i></a>
+    <a href="https://in.linkedin.com/in/ashishpshende" target='_blank' class="w3-hover-white w3-hover-text-indigo w3-show-inline-block"><i class="fa fa-linkedin"></i></a>
+  </div>
+</nav>
+
+<!-- Overlay effect when opening sidenav on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay">CLOSE</div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+  <!-- Header -->
+  <header class="w3-container w3-padding-32 w3-padding-bottom=0px w3-gray">
+    <a href="#"><img src="img_avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+    <span class="w3-opennav w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+    <h1><b>Ashish Shende</b></h1>
+
+    <div class="w3-section w3-bottombar w3-padding-16">
+     <!-- <span class="w3-margin-right">Filter:</span>
+      <button id="AllFilterButton" class="w3-btn w3-white w3-hide-small" onclick="AllFilterButton_clicked()"><i class="fa fa-check-square-o"></i>ALL</button>
+      <button id="ProjectsFilterButton" class="w3-btn w3-white w3-hide-small"><i class="fa fa-diamond w3-margin-right"></i>Projects</button>
+      <button id="SkillsFilterButton" class="w3-btn w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>Skills</button>
+      <button id="TechnolgiesFilterButton" class="w3-btn w3-white w3-hide-small"><i class="fa fa-mobile-phone w3-margin-right"></i>Technolgies</button>
+      <button id="EducationFilterButton" class="w3-btn w3-white w3-hide-small"><i class="fa fa-mortar-board w3-margin-right"></i>Education</button>
+      <button id="ContactFilterButton" class="w3-btn w3-white w3-hide-small"><i class="fa fa-group w3-margin-right"></i>Contact</button> -->
+    </div>
+ </header>
+
+<!-- About Grid -->
+<div class="w3-container w3-padding-32 w3-gray" id ="About">
+<p><h3>About</h3></p>
+    <ul>
+        <li>Versatile technology professional with demonstrated ability in software development process and in hands-on technical functions.</li>
+        <li>Technology independent, ready to learn any technology.</li>
+        <li>Good Analysis,logical, problem solving and Development Skills.</li>
+        <li>Good designing skills based on object-oriented design patterns & frameworks.</li>
+        <li>Good technical skill, communication skill and keen problem solving abilities.</li>
+        <li>Quick and self learning ability, Hard working, Adaptability.</li>
+        <li>Good at designing approaches for a problem and analysis them to find optimized one.</li>
+        <li>Requirement Gathering & Analysis, project module and estimation preparation.</li>
+        <li>Project Design : Database, Project work and control flow design.</li>
+    </ul>
+</div>
+  
+<div class="w3-container w3-padding-32 w3-gray" id ="Projects">
+<p> <h3> Projects </h3></p>
+  <!-- First Photo Grid-->
+  <div class="w3-row-padding">
+
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="http://axonator.com/img/logo.png" alt="Norway"  class="w3-hover-opacity" style="width: 350px;height: 100px;">
+      <div class="w3-container w3-transperent">
+        <p><b>Axonator</b></p>
+        <p>This system helps user to create enterprise mobile app by drag and drop facility. User can decide the flow of app using storyboard. It allows functioning in online as well as offline mode. It also contain app store containing apps, user can keep their app private.</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="http://www.siempre-wifi.com/static/img/logo-1.png" alt="Norway" class="w3-hover-opacity" style="width: 350px;height: 100px;">
+      <div class="w3-container w3-transperent">
+        <p><b>Siempre Wifi</b></p>
+        <p>This app enable to make call and send text over internet. This project contain both android and iOS App. This app is works only in online mode.</p>
+      </div>
+    </div>
+
+    <div class="w3-third w3-container">
+      <img src="https://followupfox.com/layout/img/headerLogo.png" alt="FollowUpFox Project" style="width: 350px;height: 100px;" class="w3-hover-opacity">
+      <div class="w3-container w3-transperent">
+        <p><b>FollowUp Fox </b></p>
+        <p>This is iPhone App for company agents who needs to visit people frequently to make them client. For this they need to do some specific group of tasks. This app provides and helps them to track multiple activities related to clients called as Touches.  </p>
+      </div>
+    </div>
+  </div>
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="http://updog.reviews/wp-content/uploads/2014/11/Updog_Blue_trans-300x143.png" alt="Norway" style="width: 350px;height: 100px;" class="w3-hover-opacity">
+      <div class="w3-container w3-transperent">
+        <p><b>UpDog</b></p>
+        <p>UpDog is App for uploading review for places in your cities or where you visit. You can post video, comment on place and tag your facebook friend it it.  Use UpDog to create your video and blast it out to the world on your favorite social media platforms.We have created the best way to review and share your experience at a restaurant, hotel or guitar lesson.</p>
+      </div>
+    </div>
+
+
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="http://datescanapp.com/wp-content/uploads/2016/04/DATESCANLOGOFULL-e1452616882579.png" alt="Norway" style="width: 350px;height: 100px;" class="w3-hover-opacity">
+      <div class="w3-container w3-transperent">
+        <p><b>SnapCuff</b></p>
+        <p>Snapcuff is The Ultimate Personal Safety App. Snapcuff is designed for safety of women and teenagers. It is not for parents/guardians to track or spy. Snap The Strangers & Bully. Do not go to Blind-Date without Datescan. Launched in 2015, innovative personal safety app “Snapcuff” is helping users feel safer by housing a GPS tracking system and route generator, a fast 911 dial, alarm and flash light and other components geared to thwart an attack or help find and save a victim.  Website : http://snapcuff.com</p>
+      </div>
+    </div>
+
+
+    <div class="w3-third w3-container">
+      <img src="http://images.vcpost.com/data/images/full/6915/quick-heal-logo.jpg?w=590" alt="Norway" style="width: 350px;height: 100px;" class="w3-hover-opacity">
+      <div class="w3-container w3-transperent">
+        <p><b>Automated Malware Clustering System [AMCS]</b></p>
+        <p> This system malware classification and clustering. The malware received daily in lakhs in count to classify and getting information clustering and detection of other AV is became tedious job. This problem resolved by our implemented system. This system identifies type, cluster information, categorize and get detection information about malware received. It also keeps track of the malware coming daily, and maintains statistics.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="w3-container w3-padding-32 w3-gray" id ="Skills">
+<p><h3>Skills </h3></p>  
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="http://www.mikedre.com/images/web-development-icon.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
+      <div class="w3-container w3-transperent">
+        <p><b>Web Development</b></p>
+      </div>
+    </div>
+
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="https://cdn4.iconfinder.com/data/icons/mobile-applications-1/155/vector_327_23-512.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
+      <div class="w3-container w3-transperent">
+        <p><b>Mobile Development</b></p>
+      </div>
+    </div>
+
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="http://www.techidea.co.nz/img/android_apps.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
+      <div class="w3-container w3-transperent">
+        <p><b>Android Development</b></p>
+      </div>
+    </div>
+
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="http://iconshow.me/media/images/ui/ios7-icons/png/512/social-apple.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
+      <div class="w3-container w3-transperent">
+        <p><b>iOS Development</b></p>
+      </div>
+    </div>
+
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="http://www.iconsdb.com/icons/preview/caribbean-blue/database-5-xxl.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
+      <div class="w3-container w3-transperent">
+        <p><b>DataBase</b></p>
+      </div>
+    </div>
+
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="http://imallvirtual.com/wp-content/uploads/2015/03/objects-icon.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
+      <div class="w3-container w3-transperent">
+        <p><b>Object Oriented Design</b></p>
+      </div>
+    </div>
+
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="https://cdn2.iconfinder.com/data/icons/network-roundline/512/cloud_network-512.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
+      <div class="w3-container w3-transperent">
+        <p><b>Algorithm Design</b></p>
+      </div>
+    </div>
+
+
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="http://www.freeiconspng.com/uploads/analysis-icon-14.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
+      <div class="w3-container w3-transperent">
+        <p><b>Analysis</b></p>
+        </div>
+    </div>
+
+
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="https://cdn4.iconfinder.com/data/icons/business-management/256/Global_Management-512.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
+      <div class="w3-container w3-transperent">
+        <p><b>Team Leadership</b></p>
+      </div>
+    </div>
+
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="https://cdn2.iconfinder.com/data/icons/security-2-1/512/debugger-512.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
+      <div class="w3-container w3-transperent">
+        <p><b>Debugging</b></p>
+      </div>
+    </div>
+
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="https://cdn0.iconfinder.com/data/icons/business-and-finance-6/155/vector_285_09-01-512.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
+      <div class="w3-container w3-transperent">
+        <p><b>Project Planning</b></p>
+      </div>
+    </div>
+
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="http://www.rosemont.edu/_resources/img/gen-ed/problem-solving.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
+      <div class="w3-container w3-transperent">
+        <p><b>Problem Solving</b></p>
+      </div>
+    </div>
+
+
+       <div class="w3-third w3-container w3-margin-bottom">
+      <img src="https://cdn1.iconfinder.com/data/icons/business-bicolor-3/512/social_graph-512.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
+      <div class="w3-container w3-transperent">
+        <p><b>Data Structure Design</b></p>
+      </div>
+    </div>
+
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="https://cdn0.iconfinder.com/data/icons/web-development-2/512/sitemap_site_map_ui_website_structure_wireframe_project_ux_plan_prototype_web_layout_sketch_chart_algorithm_flat_design_icon-128.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
+      <div class="w3-container w3-transperent">
+        <p><b>Control Flow Designing</b></p>
+      </div>
+    </div>
+
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="https://cdn4.iconfinder.com/data/icons/seo-accessibility-usability-2-2/256/Wireframing_and_Prototyping-512.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
+      <div class="w3-container w3-transperent">
+        <p><b>Wireframes</b></p>
+      </div>
+    </div>
+</div>
+
+<div class="w3-container w3-padding-32 w3-gray" id ="Technologies">
+<p><h3>Technologies </h3></p>  
+
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="https://images.contentful.com/7clmb9ye18e7/6LpZ8WIScMKQsAi0EoosMy/253f0d9b2f13a1b48d2a35632e86487f/Objective-c-logo.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
+      <div class="w3-container w3-transperent">
+        <p><b>Objective C</b></p>
+      </div>
+    </div>
+
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="http://i.stack.imgur.com/nt3Wo.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
+      <div class="w3-container w3-transperent">
+        <p><b>Swift</b></p>   
+      </div>
+    </div>
+
+
+   <div class="w3-third w3-container w3-margin-bottom">
+      <img src="http://static1.squarespace.com/static/54130880e4b06f3fdf003962/56809de1df40f3468f6fc11d/56809de1df40f3468f6fc120/1449522390245/JAVA-ICON-300x300.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
+      <div class="w3-container w3-transperent">
+        <p><b>Java</b></p>
+      </div>
+    </div>
+
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="https://lh3.googleusercontent.com/3gI9l3yQynt2cj1MFdTZbaYE0VK056s-lvE4iejCCZQ1_-S8v3ZGDCPsIhtQsOB8Kb8i=w300" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
+      <div class="w3-container w3-transperent">
+        <p><b>C</b></p>   
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="http://img.blog.csdn.net/20160314145705633" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
+      <div class="w3-container w3-transperent">
+        <p><b>C++</b></p>
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="http://www.syntaxxx.com/wp-content/uploads/2014/08/html5-logo-600-580x580.jpg" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
+      <div class="w3-container w3-transperent">
+        <p><b>HTML</b></p>
+      </div>
+    </div>
+
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="https://camo.githubusercontent.com/3104b6b66a026abf66d1cacd33658579b891b69d/68747470733a2f2f7261772e6769746875622e636f6d2f6772617a6a732f6c6f676f2e6a732f6d61737465722f6772617a6a732f6772617a6a732e706e67" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
+      <div class="w3-container w3-transperent">
+        <p><b>JavaScript</b></p>
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="http://www.iconsdb.com/icons/preview/orange/css-xxl.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
+      <div class="w3-container w3-transperent">
+        <p><b>CSS</b></p>
+      </div>
+    </div>    
+
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="http://azimi.me/presentations/building-swagger-editor/images/swagger.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
+      <div class="w3-container w3-transperent">
+        <p><b>JSON</b></p>
+      </div>
+    </div>   
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="http://www.acuitytraining.co.uk/wp-content/uploads/2015/05/SQL-logo-transparent.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
+      <div class="w3-container w3-transperent">
+        <p><b>SQL</b></p>
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="http://www.deccansoft.com/images/Technologies-Portfolio/ms.net-icon.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
+      <div class="w3-container w3-transperent">
+        <p><b>VB.Net</b></p>
+      </div>
+    </div>   
+     <div class="w3-third w3-container w3-margin-bottom">
+      <img src="http://www.ozser.com/wp-content/uploads/2015/07/cslogo-320x320.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
+      <div class="w3-container w3-transperent">
+        <p><b>C#.Net</b></p>
+      </div>
+    </div>  
+
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="http://downloadicons.net/sites/default/files/xml-file-icon-49314.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
+      <div class="w3-container w3-transperent">
+        <p><b>XML</b></p>
+      </div>
+    </div>               
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="http://www-asp.azureedge.net/v-2016-06-24-004/images/ui/asplogo-square.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
+      <div class="w3-container w3-transperent">
+        <p><b>ASP</b></p>
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="http://images.all-free-download.com/images/graphicthumb/mysql_68829.jpg" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
+      <div class="w3-container w3-transperent">
+        <p><b>MySQL</b></p>
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="http://shere.buruma.net/wp-content/uploads/2014/09/django.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
+      <div class="w3-container w3-transperent">
+        <p><b>Django</b></p>
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="http://www.iconsdb.com/icons/preview/orange/logo-php-xxl.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
+      <div class="w3-container w3-transperent">
+        <p><b>PHP</b></p>
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="http://www.wp-tutorials.com/wp-content/uploads/2016/01/jquery-logo.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
+      <div class="w3-container w3-transperent">
+        <p><b>JQuery</b></p>    
+      </div>
+    </div> 
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="http://static.commentcamarche.net/en.kioskea.net/pictures/QSYjyflN-perl-logo-s-.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
+      <div class="w3-container w3-transperent">
+        <p><b>Perl</b></p>
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="http://devcolibri.com/cp/wp-content/uploads/2013/11/logo.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
+      <div class="w3-container w3-transperent">
+        <p><b>SQLite</b></p>
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="http://www.hartmannsoftware.com/images/UML-logo.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
+      <div class="w3-container w3-transperent">
+        <p><b>UML</b></p>
+      </div>
+    </div>
+</div>
+
+<div class="w3-container w3-padding-32 w3-gray" id ="Education">
+<p><h3>Education </h3></p>  
+
+  <ul>
+    <li><h4>Graduation Details </h4></li>
+    <P>Bachelor of Engineering [Computer Engineering]</P>
+    <P>First Class with 70 %</P>
+    <P>JCET, Yavatmal, Sant Gadgebaba Amravati University, Amravati</P>
+    <P>July-2013</P>
+    <li><h4>Diploma Details</h4></li>
+    <P>Diploma in Computer Engineering</P>
+    <P>First Class with Distinction 80 %</P>
+    <P>Goverment Polytechnic, Yavatmal, MSBTE, Mumbai</P>
+    <P>Aug-2010</P>
+    <li><h4>SSC </h4></li>
+    <P>First Class with Distinction 81 %</P>
+    <P>Shri Shivaji MahaVidyalay, Yavatmal, Maharashtra Board (Amaravati Division), Pune</P>
+    <P>March-2007</P>
+    
+  </ul>
+</div>
+
+<div class="w3-container w3-padding-32 w3-gray" id ="Contact">
+<p><h3>Contact </h3></p>  
+
+  <ul>
+    <li><h4>Permanent Address</h4></li>
+    <P>Yavatmal</P>
+    <li><h4>Temprory Address</h4></li>
+    <P>Pune</P>
+    <li><h4>Online Social Connect</h4></li>
+
+    <div class="w3-center w3-padding-32">
+    <ul class="w3-pagination">
+      <li><img src="https://www.facebook.com/images/fb_icon_325x325.png" alt="FaceBook" style="width:5%" class="w3-hover-opacity" title ="Facebook"></li>
+      <li><img src="https://lh3.googleusercontent.com/00APBMVQh3yraN704gKCeM63KzeQ-zHUi5wK6E9TjRQ26McyqYBt-zy__4i8GXDAfeys=w300" alt="LinkedIn" style="width:5%" class="w3-hover-opacity" title="LinkedIn"></li>
+      <li><img src="http://img07.deviantart.net/42b5/i/2011/263/c/6/google__logo_hd_by_gomedun-d4agnj7.png" alt="Google" style="width:5%" class="w3-hover-opacity"></li>
+      <li><img src="https://cdn0.iconfinder.com/data/icons/social-flat-rounded-rects/512/twitter_letter-512.png" alt="Twitter" style="width:5%" class="w3-hover-opacity"></li>
+      <li><img src="https://cdn2.iconfinder.com/data/icons/flat-social-media-icons-1/2500/pinterest.png" alt="Twitter" style="width:5%" class="w3-hover-opacity"></li>
+      <li><img src="https://app.shippable.com/mktg/images/logos/bitbucket-square.png" alt="Twitter" style="width:5%" class="w3-hover-opacity"></li>  
+      <li><img src="http://apk-dl.com/detail/image/com.timesgroup.techgig-w250.png" alt="Twitter" style="width:5%" class="w3-hover-opacity"></li>
+      <li><img src="https://lh5.ggpht.com/-znrxuqNfVhqHQEtZ4TgL9VEL9OTny-D6AkjWZUiQJ8iUuYqyayeF_5IkQKIa0SAZ0A=w300" alt="Twitter" style="width:5%" class="w3-hover-opacity"></li>
+      <!-- <li><img src="https://41.media.tumblr.com/fd936d0d9ca029746b65829cac00d729/tumblr_o54m9crAQk1qhub34o1_r3_400.png" alt="Twitter" style="width:5%" class="w3-hover-opacity"></li> -->
+      <li><img src="http://www.chuymedina.net/img/githublogo.png" alt="Twitter" style="width:5%" class="w3-hover-opacity"></li>
+      <li><img src="http://files.softicons.com/download/application-icons/instagram-icons-by-design-bolts/ico/Instagram%202%20Active.ico" alt="Twitter" style="width:5%" class="w3-hover-opacity"></li>
+      <li><img src="https://cdn4.iconfinder.com/data/icons/miu-square-flat-social/60/quora-square-social-media-128.png" alt="Twitter" style="width:5%" class="w3-hover-opacity"></li>
+      <li><img src="http://cdn.mysitemyway.com/icons-watermarks/flat-rounded-square-white-on-dark-gray/social-media/social-media_stackoverflow/social-media_stackoverflow_flat-rounded-square-white-on-dark-gray_512x512.png" alt="Twitter" style="width:5%" class="w3-hover-opacity"></li>
+      <li><img src="https://gravatar.com/avatar/765a8fad72ceb224907e222fb035c216?s=512&d=https://codepen.io/assets/avatars/user-avatar-512x512-f51d1b0ffd7cc3c1d117179dcbbec3b9.png" alt="Twitter" style="width:5%" class="w3-hover-opacity"></li>
+      <li><img src="http://cdn.mysitemyway.com/icons-watermarks/flat-rounded-square-white-on-ios-orange-gradient/social-media/social-media_dribble/social-media_dribble_flat-rounded-square-white-on-ios-orange-gradient_512x512.png" alt="Twitter" style="width:5%" class="w3-hover-opacity"></li>
+      <!-- <li><img src="http://www.uvm.edu/~cses/images/academic-icon.png" alt="Twitter" style="width:5%" class="w3-hover-opacity"></li> -->
+      <li><img src="https://d3ui957tjb5bqd.cloudfront.net/images/1/default-avatars/code-75-75.png?1" alt="Twitter" style="width:5%" class="w3-hover-opacity"></li>
+      <li><img src="http://www.nbcommunication.com/site/assets/files/1643/basecamp-icon.png" alt="Twitter" style="width:5%" class="w3-hover-opacity"></li>
+      </ul>
+  </div>
+      
+  </ul>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-32 w3-gray" id="footer">
+<div class="w3-row-padding">
+    <div class="w3-third">
+      <h3>INTERESTS</h3>
+      <ul>
+        <li>Programming</li>
+        <li>Media (Audio/Video) Editing</li>
+        <li>Bike Riding</li>
+      </ul>
+     </div>
+  
+    <div class="w3-third">
+      <h3>BLOG POSTS</h3>
+      <ul class="w3-ul w3-hoverable">
+        <li class="w3-padding-16">
+          <a href="http://www.jobpedia.in/blog/how-to-develop-iphone-app/" target='_blank'><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR1hm1otKNAf4VD95rdpC1IIDqj0tYUJ2_w0iD0jV3Mr6TVSx9V" class="w3-left w3-margin-right" style="width:50px"> 
+          <span class="w3-large">iOS Development without Storyboard</span><br></a>
+          <span> I recently learned iPhone Development, it is so easy and interesting. You just need basic knowledge of programming and object oriented concepts.
+          Lets begin...</span>
+        </li> 
+      </ul>
+    </div>
+
+    <div class="w3-third">
+      <h3>POPULAR TAGS</h3>
+      <p>
+        <span class="w3-tag w3-gray w3-margin-bottom">Lead Product Developer</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom"> iOS Developer </span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Mobile Developer</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Android Developer</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Project Planning</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Object Oriented Design</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Web Developer</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Analyst</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Python Django Developer</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Perl Automation</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Social Media Integration</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Shopping</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Analytics</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Clustering</span>
+      </p>
+    </div>
+</div>
+</footer>
+
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidenav
+function w3_open() {
+    document.getElementById("mySidenav").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidenav").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+function HOME_Nav_Link_Clicked() {
+}
+
+function PROJECTS_Nav_Link_Clicked() {
+  document.getElementById("PROJECTS").class = "w3-padding w3-text-teal";
+
+}
+
+function SKILLS_Nav_Link_Clicked() {
+}
+
+function TECHNOLGIES_Nav_Link_Clicked() {
+}
+
+function EDUCATION_Nav_Link_Clicked() {
+}
+
+function CONTACT_Nav_Link_Clicked() {
+}
+
+</script>
+
+</body>
+</html>
+
+<!-- <!-- Pagination 
+  <div class="w3-center w3-padding-32">
+    <ul class="w3-pagination">
+      <li><a class="w3-black" href="#">1</a></li>
+      <li><a class="w3-hover-black" href="#">2</a></li>
+      <li><a class="w3-hover-black" href="#">3</a></li>
+      <li><a class="w3-hover-black" href="#">4</a></li>
+      <li><a class="w3-hover-black" href="#">»</a></li>
+    </ul>
+  </div>
+  -->
+
