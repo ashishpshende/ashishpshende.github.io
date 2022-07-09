@@ -1,1050 +1,724 @@
 <!DOCTYPE html>
-<html>
-<title>Ashish Shende</title>
-<link rel="icon" type="image/x-icon" href="https://cdn3.iconfinder.com/data/icons/block/32/letter-512.png" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-<style type="text/css">
-  
-    .tooltip{
-        display: inline;
-        position: relative;
-    }
-    
-    .tooltip:hover:after{
-        background: #333;
-        background: rgba(0,0,0,.8);
-        border-radius: 5px;
-        bottom: 26px;
-        color: #fff;
-        content: attr(title);
-        left: 20%;
-        padding: 5px 15px;
-        position: absolute;
-        z-index: 98;
-        width: 220px;
-    }
-    
-    .tooltip:hover:before{
-        border: solid;
-        border-color: #333 transparent;
-        border-width: 6px 6px 0 6px;
-        bottom: 20px;
-        content: "";
-        left: 50%;
-        position: absolute;
-        z-index: 99;
-    }
-    .some_element {
-        position: relative;
-        width: 20%;
-        height: 0;
-        padding-bottom: 20%;
-    }
+<html lang="en">
 
-    html,body,h1,h2,h3,h4,h5 {
-        font-family: "Raleway", sans-serif
-    }
-    
-    .w3-sidenav a,.w3-sidenav h4 {
-        font-weight:bold
-    }
-    header.noscroll{
-    position:fixed;
-    overflow:hidden;
-    }
-	/* W3.CSS 2.99 Mar 2017 by Jan Egil and Borge Refsnes */
-html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
-/* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
-html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}
-article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}
-audio,canvas,progress,video{display:inline-block}progress{vertical-align:baseline}
-audio:not([controls]){display:none;height:0}[hidden],template{display:none}
-a{background-color:transparent;-webkit-text-decoration-skip:objects}
-a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}
-dfn{font-style:italic}mark{background:#ff0;color:#000}
-small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
-sub{bottom:-0.25em}sup{top:-0.5em}figure{margin:1em 40px}
-img{border-style:none}svg:not(:root){overflow:hidden}
-code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}
-hr{box-sizing:content-box;height:0;overflow:visible}
-button,input,select,textarea{font:inherit;margin:0}optgroup{font-weight:bold}
-button,input{overflow:visible}button,select{text-transform:none}
-button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}
-button::-moz-focus-inner, [type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner{border-style:none;padding:0}
-button:-moz-focusring, [type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring{outline:1px dotted ButtonText}
-fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}
-legend{color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}
-[type=checkbox],[type=radio]{padding:0}
-[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}
-[type=search]{-webkit-appearance:textfield;outline-offset:-2px}
-[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}
-::-webkit-input-placeholder{color:inherit;opacity:0.54}
-::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}
-/* End extract */
-html,body{font-family:Verdana,sans-serif;font-size:15px;line-height:1.5}html{overflow-x:hidden}
-h1,h2,h3,h4,h5,h6,.w3-slim,.w3-wide{font-family:"Segoe UI",Arial,sans-serif}
-h1{font-size:36px}h2{font-size:30px}h3{font-size:24px}h4{font-size:20px}h5{font-size:18px}h6{font-size:16px}
-.w3-serif{font-family:"Times New Roman",Times,serif}
-h1,h2,h3,h4,h5,h6{font-weight:400;margin:10px 0}.w3-wide{letter-spacing:4px}
-h1 a,h2 a,h3 a,h4 a,h5 a,h6 a{font-weight:inherit}
-hr{border:0;border-top:1px solid #eee;margin:20px 0}
-img{margin-bottom:-5px}a{color:inherit}
-.w3-image{max-width:100%;height:auto}
-.w3-table,.w3-table-all{border-collapse:collapse;border-spacing:0;width:100%;display:table}
-.w3-table-all{border:1px solid #ccc}
-.w3-bordered tr,.w3-table-all tr{border-bottom:1px solid #ddd}
-.w3-striped tbody tr:nth-child(even){background-color:#f1f1f1}
-.w3-table-all tr:nth-child(odd){background-color:#fff}
-.w3-table-all tr:nth-child(even){background-color:#f1f1f1}
-.w3-hoverable tbody tr:hover,.w3-ul.w3-hoverable li:hover{background-color:#ccc}
-.w3-centered tr th,.w3-centered tr td{text-align:center}
-.w3-table td,.w3-table th,.w3-table-all td,.w3-table-all th{padding:8px 8px;display:table-cell;text-align:left;vertical-align:top}
-.w3-table th:first-child,.w3-table td:first-child,.w3-table-all th:first-child,.w3-table-all td:first-child{padding-left:16px}
-.w3-btn,.w3-btn-block,.w3-button{border:none;display:inline-block;outline:0;padding:6px 16px;vertical-align:middle;overflow:hidden;text-decoration:none!important;color:#fff;background-color:#000;text-align:center;cursor:pointer;white-space:nowrap}
-.w3-btn:hover,.w3-btn-block:hover,.w3-btn-floating:hover,.w3-btn-floating-large:hover{box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)}
-.w3-button{color:#000;background-color:#f1f1f1;padding:8px 16px}.w3-button:hover{color:#000!important;background-color:#ccc!important}
-.w3-btn,.w3-btn-floating,.w3-btn-floating-large,.w3-closenav,.w3-opennav,.w3-btn-block,.w3-button{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}   
-.w3-btn-floating,.w3-btn-floating-large{display:inline-block;text-align:center;color:#fff;background-color:#000;position:relative;overflow:hidden;z-index:1;padding:0;border-radius:50%;cursor:pointer;font-size:24px}
-.w3-btn-floating{width:40px;height:40px;line-height:40px}.w3-btn-floating-large{width:56px;height:56px;line-height:56px}
-.w3-disabled,.w3-btn:disabled,.w3-button:disabled,.w3-btn-floating:disabled,.w3-btn-floating-large:disabled{cursor:not-allowed;opacity:0.3}.w3-disabled *,:disabled *{pointer-events:none}
-.w3-btn.w3-disabled:hover,.w3-btn-block.w3-disabled:hover,.w3-btn:disabled:hover,.w3-btn-floating.w3-disabled:hover,.w3-btn-floating:disabled:hover,
-.w3-btn-floating-large.w3-disabled:hover,.w3-btn-floating-large:disabled:hover{box-shadow:none}
-.w3-btn-group .w3-btn{float:left}.w3-btn-block{width:100%}
-.w3-btn-bar .w3-btn{box-shadow:none;background-color:inherit;color:inherit;float:left}.w3-btn-bar .w3-btn:hover{background-color:#ccc}
-.w3-badge,.w3-tag,.w3-sign{background-color:#000;color:#fff;display:inline-block;padding-left:8px;padding-right:8px;text-align:center}
-.w3-badge{border-radius:50%}
-ul.w3-ul{list-style-type:none;padding:0;margin:0}ul.w3-ul li{padding:6px 2px 6px 16px;border-bottom:1px solid #ddd}ul.w3-ul li:last-child{border-bottom:none}
-.w3-tooltip,.w3-display-container{position:relative}.w3-tooltip .w3-text{display:none}.w3-tooltip:hover .w3-text{display:inline-block}
-.w3-navbar{list-style-type:none;margin:0;padding:0;overflow:hidden}
-.w3-navbar li{float:left}.w3-navbar li a,.w3-navitem,.w3-navbar li .w3-btn,.w3-navbar li .w3-input{display:block;padding:8px 16px}.w3-navbar li .w3-btn,.w3-navbar li .w3-input{border:none;outline:none;width:100%}
-.w3-navbar li a:hover{color:#000;background-color:#ccc}
-.w3-navbar .w3-dropdown-hover,.w3-navbar .w3-dropdown-click{position:static}
-.w3-navbar .w3-dropdown-hover:hover,.w3-navbar .w3-dropdown-hover:first-child,.w3-navbar .w3-dropdown-click:hover{background-color:#ccc;color:#000}
-.w3-navbar a,.w3-topnav a,.w3-sidenav a,.w3-dropdown-content a,.w3-accordion-content a,.w3-dropnav a,.w3-navblock a{text-decoration:none!important}
-.w3-navbar .w3-opennav.w3-right{float:right!important}.w3-topnav{padding:8px 8px}
-.w3-navblock .w3-dropdown-hover:hover,.w3-navblock .w3-dropdown-hover:first-child,.w3-navblock .w3-dropdown-click:hover{background-color:#ccc;color:#000}
-.w3-navblock .w3-dropdown-hover,.w3-navblock .w3-dropdown-click{width:100%}.w3-navblock .w3-dropdown-hover .w3-dropdown-content,.w3-navblock .w3-dropdown-click .w3-dropdown-content{min-width:100%}
-.w3-topnav a{padding:0 8px;border-bottom:3px solid transparent;-webkit-transition:border-bottom .25s;transition:border-bottom .25s}
-.w3-topnav a:hover{border-bottom:3px solid #fff}.w3-topnav .w3-dropdown-hover a{border-bottom:0}
-.w3-opennav,.w3-closenav{color:inherit}.w3-opennav:hover,.w3-closenav:hover{cursor:pointer;opacity:0.8}
-.w3-btn,.w3-btn-floating,.w3-dropnav a,.w3-btn-floating-large,.w3-btn-block, .w3-navbar a,.w3-navblock a,.w3-sidenav a,.w3-pagination li a,.w3-hoverable tbody tr,.w3-hoverable li,
-.w3-accordion-content a,.w3-dropdown-content a,.w3-dropdown-click:hover,.w3-dropdown-hover:hover,.w3-opennav,.w3-closenav,.w3-closebtn,*[class*="w3-hover-"]
-{-webkit-transition:background-color .25s,color .15s,box-shadow .25s,opacity 0.25s,filter 0.25s,border 0.15s;transition:background-color .25s,color .15s,box-shadow .15s,opacity .25s,filter .25s,border .15s}
-.w3-ripple:active{opacity:0.5}.w3-ripple{-webkit-transition:opacity 0s;transition:opacity 0s}
-.w3-sidenav,.w3-sidebar{height:100%;width:200px;background-color:#fff;position:fixed!important;z-index:1;overflow:auto}
-.w3-sidenav a,.w3-navblock a{padding:4px 2px 4px 16px}.w3-sidenav a:hover,.w3-navblock a:hover{background-color:#ccc;color:#000}.w3-sidenav a,.w3-dropnav a,.w3-navblock a{display:block}
-.w3-sidenav .w3-dropdown-hover:hover,.w3-sidenav .w3-dropdown-hover:first-child,.w3-sidenav .w3-dropdown-click:hover,.w3-dropnav a:hover{background-color:#ccc;color:#000}
-.w3-sidenav .w3-dropdown-hover,.w3-sidenav .w3-dropdown-click,.w3-bar-block .w3-dropdown-hover,.w3-bar-block .w3-dropdown-click{width:100%}
-.w3-sidenav .w3-dropdown-hover .w3-dropdown-content,.w3-sidenav .w3-dropdown-click .w3-dropdown-content,.w3-bar-block .w3-dropdown-hover .w3-dropdown-content,.w3-bar-block .w3-dropdown-click .w3-dropdown-content{min-width:100%}
-.w3-bar-block .w3-dropdown-hover .w3-button,.w3-bar-block .w3-dropdown-click .w3-button{width:100%;text-align:left;background-color:inherit;color:inherit;padding:6px 2px 6px 16px}
-.w3-main,#main{transition:margin-left .4s}
-.w3-modal{z-index:3;display:none;padding-top:100px;position:fixed;left:0;top:0;width:100%;height:100%;overflow:auto;background-color:rgb(0,0,0);background-color:rgba(0,0,0,0.4)}
-.w3-modal-content{margin:auto;background-color:#fff;position:relative;padding:0;outline:0;width:600px}.w3-closebtn{text-decoration:none;float:right;font-size:24px;font-weight:bold;color:inherit}
-.w3-closebtn:hover,.w3-closebtn:focus{color:#000;text-decoration:none;cursor:pointer}
-.w3-pagination{display:inline-block;padding:0;margin:0}.w3-pagination li{display:inline}
-.w3-pagination li a{text-decoration:none;color:#000;float:left;padding:8px 16px}
-.w3-pagination li a:hover{background-color:#ccc}
-.w3-input-group,.w3-group{margin-top:24px;margin-bottom:24px}
-.w3-input{padding:8px;display:block;border:none;border-bottom:1px solid #808080;width:100%}
-.w3-label{color:#009688}.w3-input:not(:valid)~.w3-validate{color:#f44336}
-.w3-select{padding:9px 0;width:100%;color:#000;border:1px solid transparent;border-bottom:1px solid #009688}
-.w3-select select:focus{color:#000;border:1px solid #009688}.w3-select option[disabled]{color:#009688}
-.w3-dropdown-click,.w3-dropdown-hover{position:relative;display:inline-block;cursor:pointer}
-.w3-dropdown-hover:hover .w3-dropdown-content{display:block;z-index:1}
-.w3-dropdown-hover:first-child,.w3-dropdown-click:hover{background-color:#ccc;color:#000}
-.w3-dropdown-hover:hover > .w3-button:first-child,.w3-dropdown-click:hover > .w3-button:first-child{background-color:#ccc;color:#000}
-.w3-dropdown-content{cursor:auto;color:#000;background-color:#fff;display:none;position:absolute;min-width:160px;margin:0;padding:0}
-.w3-dropdown-content a{padding:6px 16px;display:block}
-.w3-dropdown-content a:hover{background-color:#ccc}
-.w3-accordion{width:100%;cursor:pointer}
-.w3-accordion-content{cursor:auto;display:none;position:relative;width:100%;margin:0;padding:0}
-.w3-accordion-content a{padding:6px 16px;display:block}.w3-accordion-content a:hover{background-color:#ccc}
-.w3-progress-container{width:100%;height:1.5em;position:relative;background-color:#f1f1f1}
-.w3-progressbar{background-color:#757575;height:100%;position:absolute;line-height:inherit}
-input[type=checkbox].w3-check,input[type=radio].w3-radio{width:24px;height:24px;position:relative;top:6px}
-input[type=checkbox].w3-check:checked+.w3-validate,input[type=radio].w3-radio:checked+.w3-validate{color:#009688} 
-input[type=checkbox].w3-check:disabled+.w3-validate,input[type=radio].w3-radio:disabled+.w3-validate{color:#aaa}
-.w3-bar{width:100%;overflow:hidden}.w3-center .w3-bar{display:inline-block;width:auto}
-.w3-bar .w3-bar-item{padding:8px 16px;float:left;background-color:inherit;color:inherit;width:auto;border:none;outline:none;display:block}
-.w3-bar .w3-dropdown-hover,.w3-bar .w3-dropdown-click{position:static;float:left}
-.w3-bar .w3-button{background-color:inherit;color:inherit;white-space:normal}
-.w3-bar-block .w3-bar-item{width:100%;display:block;padding:8px 16px;text-align:left;background-color:inherit;color:inherit;border:none;outline:none;white-space:normal}
-.w3-bar-block.w3-center .w3-bar-item{text-align:center}
-.w3-block{display:block;width:100%}
-.w3-responsive{overflow-x:auto}
-.w3-container:after,.w3-container:before,.w3-panel:after,.w3-panel:before,.w3-row:after,.w3-row:before,.w3-row-padding:after,.w3-row-padding:before,.w3-cell-row:before,.w3-cell-row:after,
-.w3-topnav:after,.w3-topnav:before,.w3-clear:after,.w3-clear:before,.w3-btn-group:before,.w3-btn-group:after,.w3-btn-bar:before,.w3-btn-bar:after,.w3-bar:before,.w3-bar:after
-{content:"";display:table;clear:both}
-.w3-col,.w3-half,.w3-third,.w3-twothird,.w3-threequarter,.w3-quarter{float:left;width:100%}
-.w3-col.s1{width:8.33333%}
-.w3-col.s2{width:16.66666%}
-.w3-col.s3{width:24.99999%}
-.w3-col.s4{width:33.33333%}
-.w3-col.s5{width:41.66666%}
-.w3-col.s6{width:49.99999%}
-.w3-col.s7{width:58.33333%}
-.w3-col.s8{width:66.66666%}
-.w3-col.s9{width:74.99999%}
-.w3-col.s10{width:83.33333%}
-.w3-col.s11{width:91.66666%}
-.w3-col.s12,.w3-half,.w3-third,.w3-twothird,.w3-threequarter,.w3-quarter{width:99.99999%}
-@media (min-width:601px){
-.w3-col.m1{width:8.33333%}
-.w3-col.m2{width:16.66666%}
-.w3-col.m3,.w3-quarter{width:24.99999%}
-.w3-col.m4,.w3-third{width:33.33333%}
-.w3-col.m5{width:41.66666%}
-.w3-col.m6,.w3-half{width:49.99999%}
-.w3-col.m7{width:58.33333%}
-.w3-col.m8,.w3-twothird{width:66.66666%}
-.w3-col.m9,.w3-threequarter{width:74.99999%}
-.w3-col.m10{width:83.33333%}
-.w3-col.m11{width:91.66666%}
-.w3-col.m12{width:99.99999%}}
-@media (min-width:993px){
-.w3-col.l1{width:8.33333%}
-.w3-col.l2{width:16.66666%}
-.w3-col.l3,.w3-quarter{width:24.99999%}
-.w3-col.l4,.w3-third{width:33.33333%}
-.w3-col.l5{width:41.66666%}
-.w3-col.l6,.w3-half{width:49.99999%}
-.w3-col.l7{width:58.33333%}
-.w3-col.l8,.w3-twothird{width:66.66666%}
-.w3-col.l9,.w3-threequarter{width:74.99999%}
-.w3-col.l10{width:83.33333%}
-.w3-col.l11{width:91.66666%}
-.w3-col.l12{width:99.99999%}}
-.w3-content{max-width:980px;margin:auto}
-.w3-rest{overflow:hidden}
-.w3-layout-container,.w3-cell-row{display:table;width:100%}.w3-layout-row{display:table-row}.w3-layout-cell,.w3-layout-col,.w3-cell{display:table-cell}
-.w3-layout-top,.w3-cell-top{vertical-align:top}.w3-layout-middle,.w3-cell-middle{vertical-align:middle}.w3-layout-bottom,.w3-cell-bottom{vertical-align:bottom}
-.w3-hide{display:none!important}.w3-show-block,.w3-show{display:block!important}.w3-show-inline-block{display:inline-block!important}
-@media (max-width:600px){.w3-modal-content{margin:0 10px;width:auto!important}.w3-modal{padding-top:30px}
-.w3-topnav a{display:block}.w3-navbar li:not(.w3-opennav){float:none;width:100%!important}.w3-navbar li.w3-right{float:none!important}
-.w3-topnav .w3-dropdown-hover .w3-dropdown-content,.w3-navbar .w3-dropdown-click .w3-dropdown-content,.w3-navbar .w3-dropdown-hover .w3-dropdown-content,.w3-dropdown-hover.w3-mobile .w3-dropdown-content,.w3-dropdown-click.w3-mobile .w3-dropdown-content{position:relative}	
-.w3-topnav,.w3-navbar{text-align:center}.w3-hide-small{display:none!important}.w3-layout-col,.w3-mobile{display:block;width:100%!important}.w3-bar-item.w3-mobile,.w3-dropdown-hover.w3-mobile,.w3-dropdown-click.w3-mobile{text-align:center}
-.w3-dropdown-hover.w3-mobile,.w3-dropdown-hover.w3-mobile .w3-btn,.w3-dropdown-hover.w3-mobile .w3-button,.w3-dropdown-click.w3-mobile,.w3-dropdown-click.w3-mobile .w3-btn,.w3-dropdown-click.w3-mobile .w3-button{width:100%}}
-@media (max-width:768px){.w3-modal-content{width:500px}.w3-modal{padding-top:50px}}
-@media (min-width:993px){.w3-modal-content{width:900px}.w3-hide-large{display:none!important}.w3-sidenav.w3-collapse,.w3-sidebar.w3-collapse{display:block!important}}
-@media (max-width:992px) and (min-width:601px){.w3-hide-medium{display:none!important}}
-@media (max-width:992px){.w3-sidenav.w3-collapse,.w3-sidebar.w3-collapse{display:none}.w3-main{margin-left:0!important;margin-right:0!important}}
-.w3-top,.w3-bottom{position:fixed;width:100%;z-index:1}.w3-top{top:0}.w3-bottom{bottom:0}
-.w3-overlay{position:fixed;display:none;width:100%;height:100%;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,0.5);z-index:2}
-.w3-left{float:left!important}.w3-right{float:right!important}
-.w3-tiny{font-size:10px!important}.w3-small{font-size:12px!important}
-.w3-medium{font-size:15px!important}.w3-large{font-size:18px!important}
-.w3-xlarge{font-size:24px!important}.w3-xxlarge{font-size:36px!important}
-.w3-xxxlarge{font-size:48px!important}.w3-jumbo{font-size:64px!important}
-.w3-vertical{word-break:break-all;line-height:1;text-align:center;width:0.6em}
-.w3-left-align{text-align:left!important}.w3-right-align{text-align:right!important}
-.w3-justify{text-align:justify!important}.w3-center{text-align:center!important}
-.w3-display-topleft{position:absolute;left:0;top:0}.w3-display-topright{position:absolute;right:0;top:0}
-.w3-display-bottomleft{position:absolute;left:0;bottom:0}.w3-display-bottomright{position:absolute;right:0;bottom:0}
-.w3-display-middle{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%)}
-.w3-display-left{position:absolute;top:50%;left:0%;transform:translate(0%,-50%);-ms-transform:translate(-0%,-50%)}
-.w3-display-right{position:absolute;top:50%;right:0%;transform:translate(0%,-50%);-ms-transform:translate(0%,-50%)}
-.w3-display-topmiddle{position:absolute;left:50%;top:0;transform:translate(-50%,0%);-ms-transform:translate(-50%,0%)}
-.w3-display-bottommiddle{position:absolute;left:50%;bottom:0;transform:translate(-50%,0%);-ms-transform:translate(-50%,0%)}
-.w3-display-container:hover .w3-display-hover{display:block}.w3-display-container:hover span.w3-display-hover{display:inline-block}.w3-display-hover{display:none}
-.w3-display-position{position:absolute}
-.w3-circle{border-radius:50%!important}
-.w3-round-small{border-radius:2px!important}.w3-round,.w3-round-medium{border-radius:4px!important}
-.w3-round-large{border-radius:8px!important}.w3-round-xlarge{border-radius:16px!important}
-.w3-round-xxlarge{border-radius:32px!important}.w3-round-jumbo{border-radius:64px!important}
-.w3-border-0{border:0!important}.w3-border{border:1px solid #ccc!important}
-.w3-border-top{border-top:1px solid #ccc!important}.w3-border-bottom{border-bottom:1px solid #ccc!important}
-.w3-border-left{border-left:1px solid #ccc!important}.w3-border-right{border-right:1px solid #ccc!important}
-.w3-margin{margin:16px!important}.w3-margin-0{margin:0!important}
-.w3-margin-top{margin-top:16px!important}.w3-margin-bottom{margin-bottom:16px!important}
-.w3-margin-left{margin-left:16px!important}.w3-margin-right{margin-right:16px!important}
-.w3-section{margin-top:16px!important;margin-bottom:16px!important}
-.w3-padding-tiny{padding:2px 4px!important}.w3-padding-small{padding:4px 8px!important}
-.w3-padding-medium,.w3-padding,.w3-form{padding:8px 16px!important}
-.w3-padding-large{padding:12px 24px!important}.w3-padding-xlarge{padding:16px 32px!important}
-.w3-padding-xxlarge{padding:24px 48px!important}.w3-padding-jumbo{padding:32px 64px!important}
-.w3-padding-4{padding-top:4px!important;padding-bottom:4px!important}
-.w3-padding-8{padding-top:8px!important;padding-bottom:8px!important}
-.w3-padding-12{padding-top:12px!important;padding-bottom:12px!important}
-.w3-padding-16{padding-top:16px!important;padding-bottom:16px!important}
-.w3-padding-24{padding-top:24px!important;padding-bottom:24px!important}
-.w3-padding-32{padding-top:32px!important;padding-bottom:32px!important}
-.w3-padding-48{padding-top:48px!important;padding-bottom:48px!important}
-.w3-padding-64{padding-top:64px!important;padding-bottom:64px!important}
-.w3-padding-128{padding-top:128px!important;padding-bottom:128px!important}
-.w3-padding-0{padding:0!important}
-.w3-padding-top{padding-top:8px!important}.w3-padding-bottom{padding-bottom:8px!important}
-.w3-padding-left{padding-left:16px!important}.w3-padding-right{padding-right:16px!important}
-.w3-topbar{border-top:6px solid #ccc!important}.w3-bottombar{border-bottom:6px solid #ccc!important}
-.w3-leftbar{border-left:6px solid #ccc!important}.w3-rightbar{border-right:6px solid #ccc!important}
-.w3-row-padding,.w3-row-padding>.w3-half,.w3-row-padding>.w3-third,.w3-row-padding>.w3-twothird,.w3-row-padding>.w3-threequarter,.w3-row-padding>.w3-quarter,.w3-row-padding>.w3-col{padding:0 8px}
-.w3-spin{animation:w3-spin 2s infinite linear;-webkit-animation:w3-spin 2s infinite linear}
-@-webkit-keyframes w3-spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}100%{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}
-@keyframes w3-spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}100%{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}
-.w3-container{padding:0.01em 16px}
-.w3-panel{padding:0.01em 16px;margin-top:16px!important;margin-bottom:16px!important}
-.w3-example{background-color:#f1f1f1;padding:0.01em 16px}
-.w3-code,.w3-codespan{font-family:Consolas,"courier new";font-size:16px}
-.w3-code{line-height:1.4;width:auto;background-color:#fff;padding:8px 12px;border-left:4px solid #4CAF50;word-wrap:break-word}
-.w3-codespan{color:crimson;background-color:#f1f1f1;padding-left:4px;padding-right:4px;font-size:110%}
-.w3-example,.w3-code{margin:20px 0}.w3-card{border:1px solid #ccc}
-.w3-card-2,.w3-example{box-shadow:0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important}
-.w3-card-4,.w3-hover-shadow:hover{box-shadow:0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)!important}
-.w3-card-8{box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)!important}
-.w3-card-12{box-shadow:0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19)!important}
-.w3-card-16{box-shadow:0 16px 24px 0 rgba(0,0,0,0.22),0 25px 55px 0 rgba(0,0,0,0.21)!important}
-.w3-card-24{box-shadow:0 24px 24px 0 rgba(0,0,0,0.2),0 40px 77px 0 rgba(0,0,0,0.22)!important}
-.w3-animate-fading{-webkit-animation:fading 10s infinite;animation:fading 10s infinite}
-@-webkit-keyframes fading{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
-@keyframes fading{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
-.w3-animate-opacity{-webkit-animation:opac 0.8s;animation:opac 0.8s}
-@-webkit-keyframes opac{from{opacity:0} to{opacity:1}}
-@keyframes opac{from{opacity:0} to{opacity:1}}
-.w3-animate-top{position:relative;-webkit-animation:animatetop 0.4s;animation:animatetop 0.4s}
-@-webkit-keyframes animatetop{from{top:-300px;opacity:0} to{top:0;opacity:1}}
-@keyframes animatetop{from{top:-300px;opacity:0} to{top:0;opacity:1}}
-.w3-animate-left{position:relative;-webkit-animation:animateleft 0.4s;animation:animateleft 0.4s}
-@-webkit-keyframes animateleft{from{left:-300px;opacity:0} to{left:0;opacity:1}}
-@keyframes animateleft{from{left:-300px;opacity:0} to{left:0;opacity:1}}
-.w3-animate-right{position:relative;-webkit-animation:animateright 0.4s;animation:animateright 0.4s}
-@-webkit-keyframes animateright{from{right:-300px;opacity:0} to{right:0;opacity:1}}
-@keyframes animateright{from{right:-300px;opacity:0} to{right:0;opacity:1}}
-.w3-animate-bottom{position:relative;-webkit-animation:animatebottom 0.4s;animation:animatebottom 0.4s}
-@-webkit-keyframes animatebottom{from{bottom:-300px;opacity:0} to{bottom:0px;opacity:1}}
-@keyframes animatebottom{from{bottom:-300px;opacity:0} to{bottom:0;opacity:1}}
-.w3-animate-zoom {-webkit-animation:animatezoom 0.6s;animation:animatezoom 0.6s}
-@-webkit-keyframes animatezoom{from{-webkit-transform:scale(0)} to{-webkit-transform:scale(1)}}
-@keyframes animatezoom{from{transform:scale(0)} to{transform:scale(1)}}
-.w3-animate-input{-webkit-transition:width 0.4s ease-in-out;transition:width 0.4s ease-in-out}.w3-animate-input:focus{width:100%!important}
-.w3-opacity,.w3-hover-opacity:hover{opacity:0.60;-webkit-backface-visibility:hidden}
-.w3-opacity-off,.w3-hover-opacity-off:hover{opacity:1;-webkit-backface-visibility:hidden}
-.w3-opacity-max{opacity:0.25;-webkit-backface-visibility:hidden}
-.w3-opacity-min{opacity:0.75;-webkit-backface-visibility:hidden}
-.w3-greyscale-max,.w3-grayscale-max,.w3-hover-greyscale:hover,.w3-hover-grayscale:hover{-webkit-filter:grayscale(100%);filter:grayscale(100%)}
-.w3-greyscale,.w3-grayscale{-webkit-filter:grayscale(75%);filter:grayscale(75%)}
-.w3-greyscale-min,.w3-grayscale-min{-webkit-filter:grayscale(50%);filter:grayscale(50%)}
-.w3-sepia{-webkit-filter:sepia(75%);filter:sepia(75%)}
-.w3-sepia-max,.w3-hover-sepia:hover{-webkit-filter:sepia(100%);filter:sepia(100%)}
-.w3-sepia-min{-webkit-filter:sepia(50%);filter:sepia(50%)}
-.w3-text-shadow{text-shadow:1px 1px 0 #444}.w3-text-shadow-white{text-shadow:1px 1px 0 #ddd}
-.w3-transparent{background-color:transparent!important}
-.w3-hover-none:hover{box-shadow:none!important;background-color:transparent!important}
-/* Colors */
-.w3-amber,.w3-hover-amber:hover{color:#000!important;background-color:#ffc107!important}
-.w3-aqua,.w3-hover-aqua:hover{color:#000!important;background-color:#00ffff!important}
-.w3-blue,.w3-hover-blue:hover{color:#fff!important;background-color:#2196F3!important}
-.w3-light-blue,.w3-hover-light-blue:hover{color:#000!important;background-color:#87CEEB!important}
-.w3-brown,.w3-hover-brown:hover{color:#fff!important;background-color:#795548!important}
-.w3-cyan,.w3-hover-cyan:hover{color:#000!important;background-color:#00bcd4!important}
-.w3-blue-grey,.w3-hover-blue-grey:hover,.w3-blue-gray,.w3-hover-blue-gray:hover{color:#fff!important;background-color:#607d8b!important}
-.w3-green,.w3-hover-green:hover{color:#fff!important;background-color:#4CAF50!important}
-.w3-light-green,.w3-hover-light-green:hover{color:#000!important;background-color:#8bc34a!important}
-.w3-indigo,.w3-hover-indigo:hover{color:#fff!important;background-color:#3f51b5!important}
-.w3-khaki,.w3-hover-khaki:hover{color:#000!important;background-color:#f0e68c!important}
-.w3-lime,.w3-hover-lime:hover{color:#000!important;background-color:#cddc39!important}
-.w3-orange,.w3-hover-orange:hover{color:#000!important;background-color:#ff9800!important}
-.w3-deep-orange,.w3-hover-deep-orange:hover{color:#fff!important;background-color:#ff5722!important}
-.w3-pink,.w3-hover-pink:hover{color:#fff!important;background-color:#e91e63!important}
-.w3-purple,.w3-hover-purple:hover{color:#fff!important;background-color:#9c27b0!important}
-.w3-deep-purple,.w3-hover-deep-purple:hover{color:#fff!important;background-color:#673ab7!important}
-.w3-red,.w3-hover-red:hover{color:#fff!important;background-color:#f44336!important}
-.w3-sand,.w3-hover-sand:hover{color:#000!important;background-color:#fdf5e6!important}
-.w3-teal,.w3-hover-teal:hover{color:#fff!important;background-color:#009688!important}
-.w3-yellow,.w3-hover-yellow:hover{color:#000!important;background-color:#ffeb3b!important}
-.w3-white,.w3-hover-white:hover{color:#000!important;background-color:#fff!important}
-.w3-black,.w3-hover-black:hover{color:#fff!important;background-color:#000!important}
-.w3-grey,.w3-hover-grey:hover,.w3-gray,.w3-hover-gray:hover{color:#000!important;background-color:#9e9e9e!important}
-.w3-light-grey,.w3-hover-light-grey:hover,.w3-light-gray,.w3-hover-light-gray:hover{color:#000!important;background-color:#f1f1f1!important}
-.w3-dark-grey,.w3-hover-dark-grey:hover,.w3-dark-gray,.w3-hover-dark-gray:hover{color:#fff!important;background-color:#616161!important}
-.w3-pale-red,.w3-hover-pale-red:hover{color:#000!important;background-color:#ffdddd!important}
-.w3-pale-green,.w3-hover-pale-green:hover{color:#000!important;background-color:#ddffdd!important}
-.w3-pale-yellow,.w3-hover-pale-yellow:hover{color:#000!important;background-color:#ffffcc!important}
-.w3-pale-blue,.w3-hover-pale-blue:hover{color:#000!important;background-color:#ddffff!important}
-.w3-text-amber,.w3-hover-text-amber:hover{color:#ffc107!important}
-.w3-text-aqua,.w3-hover-text-aqua:hover{color:#00ffff!important}
-.w3-text-blue,.w3-hover-text-blue:hover{color:#2196F3!important}
-.w3-text-light-blue,.w3-hover-text-light-blue:hover{color:#87CEEB!important}
-.w3-text-brown,.w3-hover-text-brown:hover{color:#795548!important}
-.w3-text-cyan,.w3-hover-text-cyan:hover{color:#00bcd4!important}
-.w3-text-blue-grey,.w3-hover-text-blue-grey:hover,.w3-text-blue-gray,.w3-hover-text-blue-gray:hover{color:#607d8b!important}
-.w3-text-green,.w3-hover-text-green:hover{color:#4CAF50!important}
-.w3-text-light-green,.w3-hover-text-light-green:hover{color:#8bc34a!important}
-.w3-text-indigo,.w3-hover-text-indigo:hover{color:#3f51b5!important}
-.w3-text-khaki,.w3-hover-text-khaki:hover{color:#b4aa50!important}
-.w3-text-lime,.w3-hover-text-lime:hover{color:#cddc39!important}
-.w3-text-orange,.w3-hover-text-orange:hover{color:#ff9800!important}
-.w3-text-deep-orange,.w3-hover-text-deep-orange:hover{color:#ff5722!important}
-.w3-text-pink,.w3-hover-text-pink:hover{color:#e91e63!important}
-.w3-text-purple,.w3-hover-text-purple:hover{color:#9c27b0!important}
-.w3-text-deep-purple,.w3-hover-text-deep-purple:hover{color:#673ab7!important}
-.w3-text-red,.w3-hover-text-red:hover{color:#f44336!important}
-.w3-text-sand,.w3-hover-text-sand:hover{color:#fdf5e6!important}
-.w3-text-teal,.w3-hover-text-teal:hover{color:#009688!important}
-.w3-text-yellow,.w3-hover-text-yellow:hover{color:#d2be0e!important}
-.w3-text-white,.w3-hover-text-white:hover{color:#fff!important}
-.w3-text-black,.w3-hover-text-black:hover{color:#000!important}
-.w3-text-grey,.w3-hover-text-grey:hover,.w3-text-gray,.w3-hover-text-gray:hover{color:#757575!important}
-.w3-text-light-grey,.w3-hover-text-light-grey:hover,.w3-text-light-gray,.w3-hover-text-light-gray:hover{color:#f1f1f1!important}
-.w3-text-dark-grey,.w3-hover-text-dark-grey:hover,.w3-text-dark-gray,.w3-hover-text-dark-gray:hover{color:#3a3a3a!important}
-.w3-border-amber,.w3-hover-border-amber:hover{border-color:#ffc107!important}
-.w3-border-aqua,.w3-hover-border-aqua:hover{border-color:#00ffff!important}
-.w3-border-blue,.w3-hover-border-blue:hover{border-color:#2196F3!important}
-.w3-border-light-blue,.w3-hover-border-light-blue:hover{border-color:#87CEEB!important}
-.w3-border-brown,.w3-hover-border-brown:hover{border-color:#795548!important}
-.w3-border-cyan,.w3-hover-border-cyan:hover{border-color:#00bcd4!important}
-.w3-border-blue-grey,.w3-hover-border-blue-grey:hover,.w3-border-blue-gray,.w3-hover-border-blue-gray:hover{border-color:#607d8b!important}
-.w3-border-green,.w3-hover-border-green:hover{border-color:#4CAF50!important}
-.w3-border-light-green,.w3-hover-border-light-green:hover{border-color:#8bc34a!important}
-.w3-border-indigo,.w3-hover-border-indigo:hover{border-color:#3f51b5!important}
-.w3-border-khaki,.w3-hover-border-khaki:hover{border-color:#f0e68c!important}
-.w3-border-lime,.w3-hover-border-lime:hover{border-color:#cddc39!important}
-.w3-border-orange,.w3-hover-border-orange:hover{border-color:#ff9800!important}
-.w3-border-deep-orange,.w3-hover-border-deep-orange:hover{border-color:#ff5722!important}
-.w3-border-pink,.w3-hover-border-pink:hover{border-color:#e91e63!important}
-.w3-border-purple,.w3-hover-border-purple:hover{border-color:#9c27b0!important}
-.w3-border-deep-purple,.w3-hover-border-deep-purple:hover{border-color:#673ab7!important}
-.w3-border-red,.w3-hover-border-red:hover{border-color:#f44336!important}
-.w3-border-sand,.w3-hover-border-sand:hover{border-color:#fdf5e6!important}
-.w3-border-teal,.w3-hover-border-teal:hover{border-color:#009688!important}
-.w3-border-yellow,.w3-hover-border-yellow:hover{border-color:#ffeb3b!important}
-.w3-border-white,.w3-hover-border-white:hover{border-color:#fff!important}
-.w3-border-black,.w3-hover-border-black:hover{border-color:#000!important}
-.w3-border-grey,.w3-hover-border-grey:hover,.w3-border-gray,.w3-hover-border-gray:hover{border-color:#9e9e9e!important}
-.w3-border-light-grey,.w3-hover-border-light-grey:hover,.w3-border-light-gray,.w3-hover-border-light-gray:hover{border-color:#f1f1f1!important}
-.w3-border-dark-grey,.w3-hover-border-dark-grey:hover,.w3-border-dark-gray,.w3-hover-border-dark-gray:hover{border-color:#616161!important}
-.w3-border-pale-red,.w3-hover-border-pale-red:hover{border-color:#ffe7e7!important}.w3-border-pale-green,.w3-hover-border-pale-green:hover{border-color:#e7ffe7!important}
-.w3-border-pale-yellow,.w3-hover-border-pale-yellow:hover{border-color:#ffffcc!important}.w3-border-pale-blue,.w3-hover-border-pale-blue:hover{border-color:#e7ffff!important}
-</style>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-<body class="w3-light-gray w3-content" style="max-width:1600px">
+  <title>MyResume Bootstrap Template - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
-<!-- Sidenav/menu -->
-<nav class="w3-sidenav w3-collapse w3-gray w3-animate-left" style="z-index:3;width:300px;" id="mySidenav"><br>
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <div class="w3-container">
-    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding" title="close menu">
-      <i class="fa fa-remove"></i>
-    </a>
-    <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTYiJtNzg41uH6_geCxX05_dzwz4Rf-lkYJ1pc9FtmHifr5XMexz2nDzA" style="width:45%;" class="w3-round"><br><br>
-    <h4 class="w3-padding-0"><b>Ashish Shende</b></h4>
-    <p class="w3-text-grey">Team Lead </p>
-    <p class="w3-text-grey">Intech Creative Services</p>
-  </div>
-  <a href="#" class="w3-padding w3-text-teal" onclick="HOME_Nav_Link_Clicked()">HOME</a>
-  <a href="#Projects" class="w3-padding" onclick="PROJECTS_Nav_Link_Clicked()">PROJECTS</a>
-  <a href="#Skills" class="w3-padding" onclick="SKILLS_Nav_Link_Clicked()">SKILLS</a>
-  <a href="#Technologies" class="w3-padding" onclick="TECHNOLGIES_Nav_Link_Clicked()">TECHNOLGIES</a>
-  <a href="#Education" class="w3-padding" onclick="EDUCATION_Nav_Link_Clicked()">EDUCATION</a>
-  <a href="#Certificates" class="w3-padding" onclick="CERTIFICATE_Nav_Link_Clicked()">CERTIFICATES</a>
-  
-  <a href="#LearningandSharing" class="w3-padding" onclick="LearningandSharing_Nav_Link_Clicked()">LEARNING AND SHARING</a>
-  <a href="#Contact" class="w3-padding" onclick="CONTACT_Nav_Link_Clicked()">CONTACT</a>
-   
-  <div class="w3-section w3-padding-top w3-large">
-    <a href="https://www.facebook.com/ashishpshende" target='_blank' class="w3-hover-white w3-hover-text-indigo w3-show-inline-block"><i class="fa fa-facebook-official"></i></a>
-    <a href="https://www.pinterest.com/ashishpshende" target='_blank' class="w3-hover-white w3-hover-text-red w3-show-inline-block"><i class="fa fa-pinterest-p"></i></a>
-    <a href="https://twitter.com/ashishpshende" target='_blank' class="w3-hover-white w3-hover-text-light-blue w3-show-inline-block"><i class="fa fa-twitter"></i></a>
-    <a href="https://plus.google.com/u/0/+AshishShende629" target='_blank' class="w3-hover-white w3-hover-text-grey w3-show-inline-block"><i class="fa fa-google-plus-square"></i></a>
-    <a href="https://in.linkedin.com/in/ashishpshende" target='_blank' class="w3-hover-white w3-hover-text-indigo w3-show-inline-block"><i class="fa fa-linkedin"></i></a>
-  </div>
-</nav>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-<!-- Overlay effect when opening sidenav on small screens -->
-<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay">CLOSE</div>
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-<!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:300px">
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- Header -->
-  <header class="w3-container w3-padding-32 w3-padding-bottom=0px w3-gray">
-    <a href="#"><img src="img_avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
-    <span class="w3-opennav w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
-    <h1><b>Ashish Shende</b></h1>
+  <!-- =======================================================
+  * Template Name: MyResume - v4.7.0
+  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
 
-    <div class="w3-row">
-    <div class="w3-col-3">
-	<span>
-	  <a  href="ashishpshende@gmail.com">ashishpshende@gmail.com</a>
-	  <a style="margin-right=0;" href="ashishpshende@gmail.com">ashishpshende@hotmail.com</a>
-	</span>
-         
-    </div>    
-    <div class="w3-col-3">
-         
-    </div> 
-</div>
-    <div class="w3-section w3-bottombar w3-padding-16">
-   
-    </div>
- </header>
+<body>
 
-<!-- About Grid -->
-<div class="w3-container w3-padding-32 w3-gray" id ="About">
-<p><h3>About</h3></p>
-    <ul>
-        <li> Versatile technology Professional </li>
- <li> Demonstrated ability in the software development process </li>
- <li> Hands-on technical functions.  </li>
- <li> Micro Service Architecture(SOA)</li>
- <li> Cloud AWS & Azure  </li>
- <li> Experience in Web, Mobile, and Desktop Application  Development  </li>
- <li> Proficient .Net Framework and .net Core MVC and Web API  Applications  </li>
- <li> Good Software arch designing skills based on object-oriented design patterns &  frameworks.  </li>
- <li> Requirement Gathering & Analysis</li>
- <li> Estimation preparation.  </li>
- <li> Project Design: Wireframes Database, Project work, and control flow design.   </li>
- <li> Design & Development of iOS and Android Apps.  </li>
- <li> C#(.Net  Framework and .Net Core  2.2), Node JS,  Python</li>
- <li> SPA Development using Angular   </li>
- <li> iOS Mobile App Development  (Objective C And Swift)</li>
- <li> Android Mobile App Development  (Java)</li>
- <li> IONIC​ for Hybrid Mobile  Application </li>
- <li> RXJava ​in Android and ​MQTT  Protocol  </li>
- <li> MSSQL Server(T-SQL),  Oracle (PL SQL), SQLite, MYSQL,  PostgreSQL  </li>
- <li> Project Management ​(Asana,  Microsoft Project, Assembla,  TFS, JIRA, Bitnami Redmine)   </li>
- <li> TFS​ and ​GIT​ for ​Version</li>
-    </ul>
-</div>
-  
-<div class="w3-container w3-padding-32 w3-gray" id ="Projects">
-<p> <h3> Projects </h3></p>
-  <!-- First Photo Grid-->
-  <div class="w3-row-padding">
+  <!-- ======= Mobile nav toggle button ======= -->
+  <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex flex-column justify-content-center">
 
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src=".\src\imgs\project-axonator.png" alt="Norway"  class="w3-hover-opacity" style="width: 300px;height: 100px;">
-      <div class="w3-container w3-transperent">
-        <p><b>Axonator</b></p>
-        <p>This system helps user to create enterprise mobile app by drag and drop facility. User can decide the flow of app using storyboard. It allows functioning in online as well as offline mode. It also contain app store containing apps, user can keep their app private.</p>
-      </div>
-    </div>
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src=".\src\imgs\project-siempre.jpg" alt="Norway" class="w3-hover-opacity" style="width: 300px;height: 100px;">
-      <div class="w3-container w3-transperent">
-        <p><b>Siempre Wifi</b></p>
-        <p>This app enable to make call and send text over internet. This project contain both android and iOS App. This app is works only in online mode.</p>
-      </div>
-    </div>
-
-    <div class="w3-third w3-container">
-      <img src=".\src\imgs\project-followupfox.jpg" alt="FollowUpFox Project" style="width: 300px;height: 100px;" class="w3-hover-opacity">
-      <div class="w3-container w3-transperent">
-        <p><b>FollowUp Fox </b></p>
-        <p>This is iPhone App for company agents who needs to visit people frequently to make them client. For this they need to do some specific group of tasks. This app provides and helps them to track multiple activities related to clients called as Touches.  </p>
-      </div>
-    </div>
-  </div>
-  <!-- Second Photo Grid-->
-  <div class="w3-row-padding">
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src=".\src\imgs\project-updog.png" alt="Norway" style="width: 300px;height: 100px;" class="w3-hover-opacity">
-      <div class="w3-container w3-transperent">
-        <p><b>UpDog</b></p>
-        <p>UpDog is App for uploading review for places in your cities or where you visit. You can post video, comment on place and tag your facebook friend it it.  Use UpDog to create your video and blast it out to the world on your favorite social media platforms.We have created the best way to review and share your experience at a restaurant, hotel or guitar lesson.</p>
-      </div>
-    </div>
-
-
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src=".\src\imgs\project-snapcuff.png" alt="Norway" style="width: 300px;height: 100px;" class="w3-hover-opacity">
-      <div class="w3-container w3-transperent">
-        <p><b>SnapCuff</b></p>
-        <p>Snapcuff is The Ultimate Personal Safety App. Snapcuff is designed for safety of women and teenagers. It is not for parents/guardians to track or spy. Snap The Strangers & Bully. Do not go to Blind-Date without Datescan. Launched in 2015, innovative personal safety app “Snapcuff” is helping users feel safer by housing a GPS tracking system and route generator, a fast 911 dial, alarm and flash light and other components geared to thwart an attack or help find and save a victim.  Website : http://snapcuff.com</p>
-      </div>
-    </div>
-
-
-    <div class="w3-third w3-container">
-      <img src=".\src\imgs\project-amcs.jpg" alt="Norway" style="width: 300px;height: 100px;" class="w3-hover-opacity">
-      <div class="w3-container w3-transperent">
-        <p><b>Automated Malware Clustering System [AMCS]</b></p>
-        <p> This system malware classification and clustering. The malware received daily in lakhs in count to classify and getting information clustering and detection of other AV is became tedious job. This problem resolved by our implemented system. This system identifies type, cluster information, categorize and get detection information about malware received. It also keeps track of the malware coming daily, and maintains statistics.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="w3-container w3-padding-32 w3-gray" id ="Skills">
-<p><h3>Skills </h3></p>  
-    
-	<div class="w3-third w3-container w3-margin-bottom">
-      <img src="http://www.mikedre.com/images/web-development-icon.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
-      <div class="w3-container w3-transperent">
-        <p><b>Web Development</b></p>
-      </div>
-    </div>
-
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="https://cdn4.iconfinder.com/data/icons/mobile-applications-1/155/vector_327_23-512.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
-      <div class="w3-container w3-transperent">
-        <p><b>Mobile Development</b></p>
-      </div>
-    </div>
-
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="http://www.techidea.co.nz/img/android_apps.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
-      <div class="w3-container w3-transperent">
-        <p><b>Android Development</b></p>
-      </div>
-    </div>
-
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="http://iconshow.me/media/images/ui/ios7-icons/png/512/social-apple.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
-      <div class="w3-container w3-transperent">
-        <p><b>iOS Development</b></p>
-      </div>
-    </div>
-
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="http://www.iconsdb.com/icons/preview/caribbean-blue/database-5-xxl.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
-      <div class="w3-container w3-transperent">
-        <p><b>DataBase</b></p>
-      </div>
-    </div>
-
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="http://imallvirtual.com/wp-content/uploads/2015/03/objects-icon.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
-      <div class="w3-container w3-transperent">
-        <p><b>Object Oriented Design</b></p>
-      </div>
-    </div>
-
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="https://cdn2.iconfinder.com/data/icons/network-roundline/512/cloud_network-512.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
-      <div class="w3-container w3-transperent">
-        <p><b>Algorithm Design</b></p>
-      </div>
-    </div>
-
-
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="http://www.freeiconspng.com/uploads/analysis-icon-14.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
-      <div class="w3-container w3-transperent">
-        <p><b>Analysis</b></p>
-        </div>
-    </div>
-
-
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="https://cdn4.iconfinder.com/data/icons/business-management/256/Global_Management-512.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
-      <div class="w3-container w3-transperent">
-        <p><b>Team Leadership</b></p>
-      </div>
-    </div>
-
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="https://cdn2.iconfinder.com/data/icons/security-2-1/512/debugger-512.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
-      <div class="w3-container w3-transperent">
-        <p><b>Debugging</b></p>
-      </div>
-    </div>
-
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="https://cdn0.iconfinder.com/data/icons/business-and-finance-6/155/vector_285_09-01-512.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
-      <div class="w3-container w3-transperent">
-        <p><b>Project Planning</b></p>
-      </div>
-    </div>
-
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="http://www.rosemont.edu/_resources/img/gen-ed/problem-solving.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
-      <div class="w3-container w3-transperent">
-        <p><b>Problem Solving</b></p>
-      </div>
-    </div>
-
-
-       <div class="w3-third w3-container w3-margin-bottom">
-      <img src="https://cdn1.iconfinder.com/data/icons/business-bicolor-3/512/social_graph-512.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
-      <div class="w3-container w3-transperent">
-        <p><b>Data Structure Design</b></p>
-      </div>
-    </div>
-
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="https://cdn0.iconfinder.com/data/icons/web-development-2/512/sitemap_site_map_ui_website_structure_wireframe_project_ux_plan_prototype_web_layout_sketch_chart_algorithm_flat_design_icon-128.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
-      <div class="w3-container w3-transperent">
-        <p><b>Control Flow Designing</b></p>
-      </div>
-    </div>
-
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="https://cdn4.iconfinder.com/data/icons/seo-accessibility-usability-2-2/256/Wireframing_and_Prototyping-512.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
-      <div class="w3-container w3-transperent">
-        <p><b>Wireframes</b></p>
-      </div>
-    </div>
-</div>
-
-<div class="w3-container w3-padding-32 w3-gray" id ="Technologies">
-<p><h3>Technologies </h3></p>  
-
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="https://images.contentful.com/7clmb9ye18e7/6LpZ8WIScMKQsAi0EoosMy/253f0d9b2f13a1b48d2a35632e86487f/Objective-c-logo.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
-      <div class="w3-container w3-transperent">
-        <p><b>Objective C</b></p>
-      </div>
-    </div>
-
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="http://i.stack.imgur.com/nt3Wo.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
-      <div class="w3-container w3-transperent">
-        <p><b>Swift</b></p>   
-      </div>
-    </div>
-
-
-   <div class="w3-third w3-container w3-margin-bottom">
-      <img src="http://static1.squarespace.com/static/54130880e4b06f3fdf003962/56809de1df40f3468f6fc11d/56809de1df40f3468f6fc120/1449522390245/JAVA-ICON-300x300.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
-      <div class="w3-container w3-transperent">
-        <p><b>Java</b></p>
-      </div>
-    </div>
-
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="https://lh3.googleusercontent.com/3gI9l3yQynt2cj1MFdTZbaYE0VK056s-lvE4iejCCZQ1_-S8v3ZGDCPsIhtQsOB8Kb8i=w300" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
-      <div class="w3-container w3-transperent">
-        <p><b>C</b></p>   
-      </div>
-    </div>
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="http://img.blog.csdn.net/20160314145705633" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
-      <div class="w3-container w3-transperent">
-        <p><b>C++</b></p>
-      </div>
-    </div>
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="http://www.syntaxxx.com/wp-content/uploads/2014/08/html5-logo-600-580x580.jpg" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
-      <div class="w3-container w3-transperent">
-        <p><b>HTML</b></p>
-      </div>
-    </div>
-
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="https://camo.githubusercontent.com/3104b6b66a026abf66d1cacd33658579b891b69d/68747470733a2f2f7261772e6769746875622e636f6d2f6772617a6a732f6c6f676f2e6a732f6d61737465722f6772617a6a732f6772617a6a732e706e67" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
-      <div class="w3-container w3-transperent">
-        <p><b>JavaScript</b></p>
-      </div>
-    </div>
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="http://www.iconsdb.com/icons/preview/orange/css-xxl.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
-      <div class="w3-container w3-transperent">
-        <p><b>CSS</b></p>
-      </div>
-    </div>    
-
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="http://azimi.me/presentations/building-swagger-editor/images/swagger.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
-      <div class="w3-container w3-transperent">
-        <p><b>JSON</b></p>
-      </div>
-    </div>   
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="http://www.acuitytraining.co.uk/wp-content/uploads/2015/05/SQL-logo-transparent.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
-      <div class="w3-container w3-transperent">
-        <p><b>SQL</b></p>
-      </div>
-    </div>
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="http://www.deccansoft.com/images/Technologies-Portfolio/ms.net-icon.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
-      <div class="w3-container w3-transperent">
-        <p><b>VB.Net</b></p>
-      </div>
-    </div>   
-     <div class="w3-third w3-container w3-margin-bottom">
-      <img src="http://www.ozser.com/wp-content/uploads/2015/07/cslogo-320x320.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
-      <div class="w3-container w3-transperent">
-        <p><b>C#.Net</b></p>
-      </div>
-    </div>  
-
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="http://downloadicons.net/sites/default/files/xml-file-icon-49314.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
-      <div class="w3-container w3-transperent">
-        <p><b>XML</b></p>
-      </div>
-    </div>               
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="http://www-asp.azureedge.net/v-2016-06-24-004/images/ui/asplogo-square.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
-      <div class="w3-container w3-transperent">
-        <p><b>ASP</b></p>
-      </div>
-    </div>
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="http://images.all-free-download.com/images/graphicthumb/mysql_68829.jpg" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
-      <div class="w3-container w3-transperent">
-        <p><b>MySQL</b></p>
-      </div>
-    </div>
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="http://shere.buruma.net/wp-content/uploads/2014/09/django.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
-      <div class="w3-container w3-transperent">
-        <p><b>Django</b></p>
-      </div>
-    </div>
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="http://www.iconsdb.com/icons/preview/orange/logo-php-xxl.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
-      <div class="w3-container w3-transperent">
-        <p><b>PHP</b></p>
-      </div>
-    </div>
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="http://www.wp-tutorials.com/wp-content/uploads/2016/01/jquery-logo.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
-      <div class="w3-container w3-transperent">
-        <p><b>JQuery</b></p>    
-      </div>
-    </div> 
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="http://static.commentcamarche.net/en.kioskea.net/pictures/QSYjyflN-perl-logo-s-.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
-      <div class="w3-container w3-transperent">
-        <p><b>Perl</b></p>
-      </div>
-    </div>
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="http://devcolibri.com/cp/wp-content/uploads/2013/11/logo.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
-      <div class="w3-container w3-transperent">
-        <p><b>SQLite</b></p>
-      </div>
-    </div>
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="http://www.hartmannsoftware.com/images/UML-logo.png" alt="iOS"  style="width: 100px;height: 100px;" class="w3-hover-opacity">
-      <div class="w3-container w3-transperent">
-        <p><b>UML</b></p>
-      </div>
-    </div>
-</div>
-
-<div class="w3-container w3-padding-32 w3-gray" id ="Education">
-<p><h3>Education </h3></p>  
-
-  <ul>
-    <li><h4>Graduation Details </h4></li>
-    <P>Bachelor of Engineering [Computer Engineering]</P>
-    <P>First Class with 70 %</P>
-    <P>JCET, Yavatmal, Sant Gadgebaba Amravati University, Amravati</P>
-    <P>July-2013</P>
-    <li><h4>Diploma Details</h4></li>
-    <P>Diploma in Computer Engineering</P>
-    <P>First Class with Distinction 80 %</P>
-    <P>Goverment Polytechnic, Yavatmal, MSBTE, Mumbai</P>
-    <P>Aug-2010</P>
-    <li><h4>SSC </h4></li>
-    <P>First Class with Distinction 81 %</P>
-    <P>Shri Shivaji MahaVidyalay, Yavatmal, Maharashtra Board (Amaravati Division), Pune</P>
-    <P>March-2007</P>
-    
-  </ul>
-</div>
-<div class="w3-container w3-padding-32 w3-gray" id ="Certificates">
-<p><h3>Cerficates </h3></p>  
-
-  <ul>
-    <li><h4>Online Courses </h4></li>
-	
-	<ol>
-  
-
-    <li><h4>Udemy </h4></li>
-    
-    <li><h4>Pluralsight </h4></li>
-    
-    
-  </ol>
-    
-    <li><h4>Offline Courses</h4></li>
-    <ol>
-  
-
-    <li><h4>Classes </h4></li>
-    
-    <li><h4>Pluralsight </h4></li>
-    
-    
-  </ol>
-    
-    
-  </ul>
-</div>
-<div class="w3-container w3-padding-32 w3-gray" id ="LearningandSharing">
-<p><h3>Learning and Sharing </h3></p>  
-
- <ul>
- <li><h4>Seminars </h4></li>
-  <ul>
-  
-
-    <li><h4>Seminars Attended </h4></li>
-    
-    <li><h4>Seminars Delivered</h4></li>
-    
-    
-  </ul>
- <li><h4>Workshops </h4></li>
- <ul>
-  
-
-    <li><h4>Workshops Attended </h4></li>
-     <ol>
-  
-
-    <li><h4>React JS </h4></li>
-    
-    <li><h4>Angular </h4></li>
-    
-    
-  </ol>
-    
-    <li><h4>Workshops Delivered</h4></li>
-         <ol>
-  <li><h4>Hybrid Mobile Application Development </h4></li>
-
-    <li><h4>Android Application Development </h4></li>
-    
-    <li><h4>Angular Application Development </h4></li>
-    
-    
-  </ol>
-    
-  </ul>
-  <li><h4>Expert Lectures </h4></li>
-  <ul>
-  
-
-    <li><h4>Seminars Attended </h4></li>
-    
-    <li><h4>Seminars Delivered</h4></li>
-    
-    
-  </ul>
-  </ul>
-</div>
-
-<div class="w3-container w3-padding-32 w3-gray" id ="Contact">
-<p><h3>Contact </h3></p>  
-
-  <ul>
-   
-    <li><h4>Permanent Address</h4></li>
-    <P>Dhayari, Pune</P>
-    <li><h4>Online Social Connect</h4></li>
-
-    <div class="w3-center w3-padding-32">
-    <ul class="w3-pagination">
-      <li><img src="https://www.facebook.com/images/fb_icon_325x325.png" alt="FaceBook" style="width:5%" class="w3-hover-opacity" title ="Facebook"></li>
-      <li><img src="https://lh3.googleusercontent.com/00APBMVQh3yraN704gKCeM63KzeQ-zHUi5wK6E9TjRQ26McyqYBt-zy__4i8GXDAfeys=w300" alt="LinkedIn" style="width:5%" class="w3-hover-opacity" title="LinkedIn"></li>
-      <li><img src="http://img07.deviantart.net/42b5/i/2011/263/c/6/google__logo_hd_by_gomedun-d4agnj7.png" alt="Google" style="width:5%" class="w3-hover-opacity"></li>
-      <li><img src="https://cdn0.iconfinder.com/data/icons/social-flat-rounded-rects/512/twitter_letter-512.png" alt="Twitter" style="width:5%" class="w3-hover-opacity"></li>
-      <li><img src="https://cdn2.iconfinder.com/data/icons/flat-social-media-icons-1/2500/pinterest.png" alt="Twitter" style="width:5%" class="w3-hover-opacity"></li>
-      <li><img src="https://app.shippable.com/mktg/images/logos/bitbucket-square.png" alt="Twitter" style="width:5%" class="w3-hover-opacity"></li>  
-      <li><img src="http://apk-dl.com/detail/image/com.timesgroup.techgig-w250.png" alt="Twitter" style="width:5%" class="w3-hover-opacity"></li>
-      <li><img src="https://lh5.ggpht.com/-znrxuqNfVhqHQEtZ4TgL9VEL9OTny-D6AkjWZUiQJ8iUuYqyayeF_5IkQKIa0SAZ0A=w300" alt="Twitter" style="width:5%" class="w3-hover-opacity"></li>
-      <!-- <li><img src="https://41.media.tumblr.com/fd936d0d9ca029746b65829cac00d729/tumblr_o54m9crAQk1qhub34o1_r3_400.png" alt="Twitter" style="width:5%" class="w3-hover-opacity"></li> -->
-      <li><img src="http://www.chuymedina.net/img/githublogo.png" alt="Twitter" style="width:5%" class="w3-hover-opacity"></li>
-      <li><img src="http://files.softicons.com/download/application-icons/instagram-icons-by-design-bolts/ico/Instagram%202%20Active.ico" alt="Twitter" style="width:5%" class="w3-hover-opacity"></li>
-      <li><img src="https://cdn4.iconfinder.com/data/icons/miu-square-flat-social/60/quora-square-social-media-128.png" alt="Twitter" style="width:5%" class="w3-hover-opacity"></li>
-      <li><img src="http://cdn.mysitemyway.com/icons-watermarks/flat-rounded-square-white-on-dark-gray/social-media/social-media_stackoverflow/social-media_stackoverflow_flat-rounded-square-white-on-dark-gray_512x512.png" alt="Twitter" style="width:5%" class="w3-hover-opacity"></li>
-      <li><img src="https://gravatar.com/avatar/765a8fad72ceb224907e222fb035c216?s=512&d=https://codepen.io/assets/avatars/user-avatar-512x512-f51d1b0ffd7cc3c1d117179dcbbec3b9.png" alt="Twitter" style="width:5%" class="w3-hover-opacity"></li>
-      <li><img src="http://cdn.mysitemyway.com/icons-watermarks/flat-rounded-square-white-on-ios-orange-gradient/social-media/social-media_dribble/social-media_dribble_flat-rounded-square-white-on-ios-orange-gradient_512x512.png" alt="Twitter" style="width:5%" class="w3-hover-opacity"></li>
-      <!-- <li><img src="http://www.uvm.edu/~cses/images/academic-icon.png" alt="Twitter" style="width:5%" class="w3-hover-opacity"></li> -->
-      <li><img src="https://d3ui957tjb5bqd.cloudfront.net/images/1/default-avatars/code-75-75.png?1" alt="Twitter" style="width:5%" class="w3-hover-opacity"></li>
-      <li><img src="http://www.nbcommunication.com/site/assets/files/1643/basecamp-icon.png" alt="Twitter" style="width:5%" class="w3-hover-opacity"></li>
-      </ul>
-  </div>
-      
-  </ul>
-</div>
-
-<!-- Footer -->
-<footer class="w3-container w3-padding-32 w3-gray" id="footer">
-<div class="w3-row-padding">
-    <div class="w3-third">
-      <h3>INTERESTS</h3>
+    <nav id="navbar" class="navbar nav-menu">
       <ul>
-        <li>Programming</li>
-        <li>Media (Audio/Video) Editing</li>
-        <li>Bike Riding</li>
+        <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+        <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+        <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+        <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
+        <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
+        <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
       </ul>
-     </div>
-  
-    <div class="w3-third">
-      <h3>BLOG POSTS</h3>
-      <ul class="w3-ul w3-hoverable">
-        <li class="w3-padding-16">
-          <a href="http://www.jobpedia.in/blog/how-to-develop-iphone-app/" target='_blank'><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR1hm1otKNAf4VD95rdpC1IIDqj0tYUJ2_w0iD0jV3Mr6TVSx9V" class="w3-left w3-margin-right" style="width:50px"> 
-          <span class="w3-large">iOS Development without Storyboard</span><br></a>
-          <span> I recently learned iPhone Development, it is so easy and interesting. You just need basic knowledge of programming and object oriented concepts.
-          Lets begin...</span>
-        </li> 
-      </ul>
+    </nav><!-- .nav-menu -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center">
+    <div class="container" data-aos="zoom-in" data-aos-delay="100">
+      <h1>Brandon Johnson</h1>
+      <p>I'm <span class="typed" data-typed-items="Designer, Developer, Freelancer, Photographer"></span></p>
+      <div class="social-links">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
     </div>
+  </section><!-- End Hero -->
 
-    <div class="w3-third">
-      <h3>POPULAR TAGS</h3>
-      <p>
-        <span class="w3-tag w3-gray w3-margin-bottom">Lead Product Developer</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom"> iOS Developer </span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Mobile Developer</span>
-        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Android Developer</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Project Planning</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Object Oriented Design</span>
-        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Web Developer</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Analyst</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Python Django Developer</span>
-        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Perl Automation</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Social Media Integration</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Shopping</span>
-        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Analytics</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Clustering</span>
-      </p>
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>About</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4">
+            <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-8 pt-4 pt-lg-0 content">
+            <h3>UI/UX Designer &amp; Web Developer.</h3>
+            <p class="fst-italic">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua.
+            </p>
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>1 May 1995</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.example.com</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+123 456 7890</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>New York, USA</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>30</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Master</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>PhEmailone:</strong> <span>email@example.com</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
+                </ul>
+              </div>
+            </div>
+            <p>
+              Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
+              Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Facts Section ======= -->
+    <section id="facts" class="facts">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Facts</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+              <i class="bi bi-emoji-smile"></i>
+              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Happy Clients</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+            <div class="count-box">
+              <i class="bi bi-journal-richtext"></i>
+              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Projects</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+            <div class="count-box">
+              <i class="bi bi-headset"></i>
+              <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Hours Of Support</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+            <div class="count-box">
+              <i class="bi bi-award"></i>
+              <span data-purecounter-start="0" data-purecounter-end="25" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Awards</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Facts Section -->
+
+    <!-- ======= Skills Section ======= -->
+    <section id="skills" class="skills section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Skills</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row skills-content">
+
+          <div class="col-lg-6">
+
+            <div class="progress">
+              <span class="skill">HTML <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">CSS <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">JavaScript <i class="val">75%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+
+            <div class="progress">
+              <span class="skill">PHP <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">WordPress/CMS <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Photoshop <i class="val">55%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Skills Section -->
+
+    <!-- ======= Resume Section ======= -->
+    <section id="resume" class="resume">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Resume</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <h3 class="resume-title">Sumary</h3>
+            <div class="resume-item pb-0">
+              <h4>Brandon Johnson</h4>
+              <p><em>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.</em></p>
+              <ul>
+                <li>Portland par 127,Orlando, FL</li>
+                <li>(123) 456-7891</li>
+                <li>alice.barkley@example.com</li>
+              </ul>
+            </div>
+
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>Master of Fine Arts &amp; Graphic Design</h4>
+              <h5>2015 - 2016</h5>
+              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
+              <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p>
+            </div>
+            <div class="resume-item">
+              <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
+              <h5>2010 - 2014</h5>
+              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
+              <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <h3 class="resume-title">Professional Experience</h3>
+            <div class="resume-item">
+              <h4>Senior graphic design specialist</h4>
+              <h5>2019 - Present</h5>
+              <p><em>Experion, New York, NY </em></p>
+              <ul>
+                <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
+                <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project. </li>
+                <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design</li>
+                <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <h4>Graphic design specialist</h4>
+              <h5>2017 - 2018</h5>
+              <p><em>Stepping Stone Advertising, New York, NY</em></p>
+              <ul>
+                <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and advertisements).</li>
+                <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
+                <li>Recommended and consulted with clients on the most appropriate graphic design</li>
+                <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Resume Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Portfolio</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">App</li>
+              <li data-filter=".filter-card">Card</li>
+              <li data-filter=".filter-web">Web</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>App 1</h4>
+                <p>App</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>App 2</h4>
+                <p>App</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Card 2</h4>
+                <p>Card</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Web 2</h4>
+                <p>Web</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>App 3</h4>
+                <p>App</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Card 1</h4>
+                <p>Card</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Card 3</h4>
+                <p>Card</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Services</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box iconbox-blue">
+              <div class="icon">
+                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,521.0016835830174C376.1290562159157,517.8887921683347,466.0731472004068,529.7835943286574,510.70327084640275,468.03025145048787C554.3714126377745,407.6079735673963,508.03601936045806,328.9844924480964,491.2728898941984,256.3432110539036C474.5976632858925,184.082847569629,479.9380746630129,96.60480741107993,416.23090153303,58.64404602377083C348.86323505073057,18.502131276798302,261.93793281208167,40.57373210992963,193.5410806939664,78.93577620505333C130.42746243093433,114.334589627462,98.30271207620316,179.96522072025542,76.75703585869454,249.04625023123273C51.97151888228291,328.5150500222984,13.704378332031375,421.85034740162234,66.52175969318436,486.19268352777647C119.04800174914682,550.1803526380478,217.28368757567262,524.383925680826,300,521.0016835830174"></path>
+                </svg>
+                <i class="bx bxl-dribbble"></i>
+              </div>
+              <h4><a href="">Lorem Ipsum</a></h4>
+              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+            <div class="icon-box iconbox-orange ">
+              <div class="icon">
+                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,582.0697525312426C382.5290701553225,586.8405444964366,449.9789794690241,525.3245884688669,502.5850820975895,461.55621195738473C556.606425686781,396.0723002908107,615.8543463187945,314.28637112970534,586.6730223649479,234.56875336149918C558.9533121215079,158.8439757836574,454.9685369536778,164.00468322053177,381.49747125262974,130.76875717737553C312.15926192815925,99.40240125094834,248.97055460311594,18.661163978235184,179.8680185752513,50.54337015887873C110.5421016452524,82.52863877960104,119.82277516462835,180.83849132639028,109.12597500060166,256.43424936330496C100.08760227029461,320.3096726198365,92.17705696193138,384.0621239912766,124.79988738764834,439.7174275375508C164.83382741302287,508.01625554203684,220.96474134820875,577.5009287672846,300,582.0697525312426"></path>
+                </svg>
+                <i class="bx bx-file"></i>
+              </div>
+              <h4><a href="">Sed Perspiciatis</a></h4>
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
+            <div class="icon-box iconbox-pink">
+              <div class="icon">
+                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,541.5067337569781C382.14930387511276,545.0595476570109,479.8736841581634,548.3450877840088,526.4010558755058,480.5488172755941C571.5218469581645,414.80211281144784,517.5187510058486,332.0715597781072,496.52539010469104,255.14436215662573C477.37192572678356,184.95920475031193,473.57363656557914,105.61284051026155,413.0603344069578,65.22779650032875C343.27470386102294,18.654635553484475,251.2091493199835,5.337323636656869,175.0934190732945,40.62881213300186C97.87086631185822,76.43348514350839,51.98124368387456,156.15599469081315,36.44837278890362,239.84606092416172C21.716077023791087,319.22268207091537,43.775223500013084,401.1760424656574,96.891909868211,461.97329694683043C147.22146801428983,519.5804099606455,223.5754009179313,538.201503339737,300,541.5067337569781"></path>
+                </svg>
+                <i class="bx bx-tachometer"></i>
+              </div>
+              <h4><a href="">Magni Dolores</a></h4>
+              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box iconbox-yellow">
+              <div class="icon">
+                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,503.46388370962813C374.79870501325706,506.71871716319447,464.8034551963731,527.1746412648533,510.4981551193396,467.86667711651364C555.9287308511215,408.9015244558933,512.6030010748507,327.5744911775523,490.211057578863,256.5855673507754C471.097692560561,195.9906835881958,447.69079081568157,138.11976852964426,395.19560036434837,102.3242989838813C329.3053358748298,57.3949838291264,248.02791733380457,8.279543830951368,175.87071277845988,42.242879143198664C103.41431057327972,76.34704239035025,93.79494320519305,170.9812938413882,81.28167332365135,250.07896920659033C70.17666984294237,320.27484674793965,64.84698225790005,396.69656628748305,111.28512138212992,450.4950937839243C156.20124167950087,502.5303643271138,231.32542653798444,500.4755392045468,300,503.46388370962813"></path>
+                </svg>
+                <i class="bx bx-layer"></i>
+              </div>
+              <h4><a href="">Nemo Enim</a></h4>
+              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="icon-box iconbox-red">
+              <div class="icon">
+                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,532.3542879108572C369.38199826031484,532.3153073249985,429.10787420159085,491.63046689027357,474.5244479745417,439.17860296908856C522.8885846962883,383.3225815378663,569.1668002868075,314.3205725914397,550.7432151929288,242.7694973846089C532.6665558377875,172.5657663291529,456.2379748765914,142.6223662098291,390.3689995646985,112.34683881706744C326.66090330228417,83.06452184765237,258.84405631176094,53.51806209861945,193.32584062364296,78.48882559362697C121.61183558270385,105.82097193414197,62.805066853699245,167.19869350419734,48.57481801355237,242.6138429142374C34.843463184063346,315.3850353017275,76.69343916112496,383.4422959591041,125.22947124332185,439.3748458443577C170.7312796277747,491.8107796887764,230.57421082200815,532.3932930995766,300,532.3542879108572"></path>
+                </svg>
+                <i class="bx bx-slideshow"></i>
+              </div>
+              <h4><a href="">Dele Cardo</a></h4>
+              <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="icon-box iconbox-teal">
+              <div class="icon">
+                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,566.797414625762C385.7384707136149,576.1784315230908,478.7894351017131,552.8928747891023,531.9192734346935,484.94944893311C584.6109503024035,417.5663521118492,582.489472248146,322.67544863468447,553.9536738515405,242.03673114598146C529.1557734026468,171.96086150256528,465.24506316201064,127.66468636344209,395.9583748389544,100.7403814666027C334.2173773831606,76.7482773500951,269.4350130405921,84.62216499799875,207.1952322260088,107.2889140133804C132.92018162631612,134.33871894543012,41.79353780512637,160.00259165414826,22.644507872594943,236.69541883565114C3.319112789854554,314.0945973066697,72.72355303640163,379.243833228382,124.04198916343866,440.3218312028393C172.9286146004772,498.5055451809895,224.45579914871206,558.5317968840102,300,566.797414625762"></path>
+                </svg>
+                <i class="bx bx-arch"></i>
+              </div>
+              <h4><a href="">Divera Don</a></h4>
+              <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Testimonials</h2>
+        </div>
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <h3>Saul Goodman</h3>
+                <h4>Ceo &amp; Founder</h4>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <h3>Sara Wilsson</h3>
+                <h4>Designer</h4>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <h3>Jena Karlis</h3>
+                <h4>Store Owner</h4>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                <h3>Matt Brandon</h3>
+                <h4>Freelancer</h4>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+                <h4>Entrepreneur</h4>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+        </div>
+
+        <div class="row mt-1">
+
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>A108 Adam Street, New York, NY 535022</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>info@example.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>+1 5589 55488 55s</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-8 mt-5 mt-lg-0">
+
+            
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <h3>Brandon Johnson</h3>
+      <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
+      <div class="social-links">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+      <div class="copyright">
+        &copy; Copyright <strong><span>MyResume</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: [license-url] -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
     </div>
-</div>
-</footer>
+  </footer><!-- End Footer -->
 
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-<!-- End page content -->
-</div>
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
 
-<script>
-// Script to open and close sidenav
-function w3_open() {
-    document.getElementById("mySidenav").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
-}
- 
-function w3_close() {
-    document.getElementById("mySidenav").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
-}
-
-function HOME_Nav_Link_Clicked() {
-}
-
-function PROJECTS_Nav_Link_Clicked() {
-  document.getElementById("PROJECTS").class = "w3-padding w3-text-teal";
-
-}
-
-function SKILLS_Nav_Link_Clicked() {
-}
-
-function TECHNOLGIES_Nav_Link_Clicked() {
-}
-
-function EDUCATION_Nav_Link_Clicked() {
-}
-
-function CERTIFICATE_Nav_Link_Clicked() {
-}
-function CONTACT_Nav_Link_Clicked() {
-}
-
-</script>
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
 
 </body>
-</html>
-<script data-ad-client="ca-pub-3889716010378647" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- <!-- Pagination 
-  <div class="w3-center w3-padding-32">
-    <ul class="w3-pagination">
-      <li><a class="w3-black" href="#">1</a></li>
-      <li><a class="w3-hover-black" href="#">2</a></li>
-      <li><a class="w3-hover-black" href="#">3</a></li>
-      <li><a class="w3-hover-black" href="#">4</a></li>
-      <li><a class="w3-hover-black" href="#">»</a></li>
-    </ul>
-  </div>
-  -->
 
+</html>
